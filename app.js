@@ -67,6 +67,26 @@ const STRINGS = {
     "alt.grey": "فستان رمادي مطرّز بالأزهار البرّية",
     "wa.general": "مرحبًا دار رفا 🌿 أودّ الاستفسار عن قطعكم.",
     "wa.piece": "مرحبًا دار رفا 🌿 أودّ الاستفسار عن: ",
+    "season.eyebrow": "موسم جديد في الدار",
+    "season.quote": "يدخل اللون البني، موسم البلوط واليقطين…",
+    "season.cta": "شاهدي قطع الموسم",
+    "f.season": "الموسم",
+    "guide.rooms": "هنا تسكن القطع. اضغطي على أيّ قطعة لتسمعي حكايتها.",
+    "guide.handmade": "هذه سلّتي؛ فيها الخيوط والإبر وكل الحكايات التي لم تُطرَّز بعد.",
+    "guide.talks": "تعالي نجلس قليلًا… عندي حكايات صغيرة أحبّ أن أرويها لكِ.",
+    "guide.order": "وصلنا إلى آخر الجولة! راسليني، وسأحضّر قطعتكِ بنفسي.",
+    "hills.quote": "«القطعة التي تُخاط باليد، تحمل شيئًا من اليد التي خاطتها.»",
+    "hills.cite": "— رفيف",
+    "product.hint": "اكتشفي الحكاية",
+    "qv.fabric": "القماش",
+    "qv.work": "العمل",
+    "qv.workVal": "تطريز وحياكة يدوية في الدار",
+    "qv.size": "المقاس",
+    "qv.sizeVal": "راسلينا لنعرف المقاسات المتوفرة",
+    "qv.guide": "قطعة واحدة لا تشبه غيرها؛ فكل غرزة فيها مختلفة قليلًا.",
+    "qv.cta": "اطلبي هذه القطعة عبر واتساب",
+    "qv.season": "من قطع الموسم",
+    "alt.vest": "طقم صدرية وتنورة بلون القهوة",
     toggle: "EN",
   },
   en: {
@@ -133,53 +153,130 @@ const STRINGS = {
     "alt.grey": "Grey dress embroidered with wildflowers",
     "wa.general": "Hello Rafa Atelier 🌿 I'd like to ask about your pieces.",
     "wa.piece": "Hello Rafa Atelier 🌿 I'd like to ask about: ",
+    "season.eyebrow": "A new season in the house",
+    "season.quote": "Brown walks in — the season of acorns and pumpkins…",
+    "season.cta": "See the season's pieces",
+    "f.season": "This season",
+    "guide.rooms": "This is where the pieces live. Tap any one to hear its story.",
+    "guide.handmade": "This is my basket — threads, needles, and all the stories not yet embroidered.",
+    "guide.talks": "Come, sit with me a while… I have small stories I'd love to tell you.",
+    "guide.order": "We've reached the end of the tour! Message me and I'll prepare your piece myself.",
+    "hills.quote": "“A piece sewn by hand carries something of the hand that sewed it.”",
+    "hills.cite": "— Rafeef",
+    "product.hint": "Discover its story",
+    "qv.fabric": "Fabric",
+    "qv.work": "Craft",
+    "qv.workVal": "Hand-embroidered and sewn in the atelier",
+    "qv.size": "Size",
+    "qv.sizeVal": "Message us for available sizes",
+    "qv.guide": "No two pieces are alike — every stitch is a little different.",
+    "qv.cta": "Order this piece on WhatsApp",
+    "qv.season": "This season's piece",
+    "alt.vest": "Coffee-toned vest and skirt set",
     toggle: "ع",
   },
 };
 
+// [name, short line, story, fabric]
 const PRODUCTS = [
-  { img: "grey-dress", cat: "dresses",
-    ar: ["فستان سنابل الرماد", "كتّانٌ رماديّ ناعم، وأزهارٌ برّية مطرّزة على الكتفين."],
-    en: ["Ash & Wheat Dress", "Soft grey linen with wildflowers embroidered across the shoulders."] },
-  { img: "vest-set", cat: "sets",
-    ar: ["طقم البلوط", "صدريّة وتنورة بلون القهوة، تتناثر عليهما وردات صغيرة بالإبرة."],
-    en: ["The Acorn Set", "A coffee-toned vest and skirt scattered with tiny hand-stitched roses."] },
+  { img: "grey-dress", cat: "dresses", season: true,
+    ar: ["فستان سنابل الرماد", "كتّانٌ رماديّ ناعم، وأزهارٌ برّية مطرّزة على الكتفين.",
+      "حين يبرد الهواء قليلًا ويميل الضوء إلى الذهبيّ، يخرج هذا الفستان من الخزانة. طرّزنا على كتفيه أزهار الحقول البنفسجية والصفراء، وتركنا الأكمام تنتفخ بهدوء كأنها تتنفس.",
+      "كتّان طبيعي"],
+    en: ["Ash & Wheat Dress", "Soft grey linen with wildflowers embroidered across the shoulders.",
+      "When the air cools and the light turns golden, this dress comes out of the wardrobe. Purple and yellow field flowers are stitched across the shoulders, and the sleeves gather softly, as if breathing.",
+      "Natural linen"] },
+  { img: "vest-set", cat: "sets", season: true,
+    ar: ["طقم البلوط", "صدريّة وتنورة بلون القهوة، تتناثر عليهما وردات صغيرة بالإبرة.",
+      "بتصميمٍ خاص وحياكة يدوية كاملة. صدريّة بأزرار صغيرة ملوّنة، وتنورة تتناثر عليها ورداتٌ وردية كأنها سقطت من غصن. يُلبس فوق قميص بياقة مخرّمة.",
+      "كتّان وقطن"],
+    en: ["The Acorn Set", "A coffee-toned vest and skirt scattered with tiny hand-stitched roses.",
+      "A special design, sewn entirely by hand. A vest with tiny coloured buttons and a skirt scattered with pink rosebuds, as if they fell from a branch. Worn over a lace-collared shirt.",
+      "Linen & cotton"] },
   { img: "cardigan-dress", cat: "sets",
-    ar: ["طقم التوليب", "سترة رمادية خفيفة فوق فستانٍ أسود تزيّنه زهرتا توليب."],
-    en: ["The Tulip Set", "A light grey cardigan over a black dress adorned with two tulips."] },
+    ar: ["طقم التوليب", "سترة رمادية خفيفة فوق فستانٍ أسود تزيّنه زهرتا توليب.",
+      "هذا الفن يزيّن الدار، وهذا الفن قلب رفيف. زهرتا توليب من قماشٍ مربّع عند الخصر، وسترة خفيفة بخياطةٍ ظاهرة وزهرة صغيرة على الكمّ.",
+      "قطن وكتّان"],
+    en: ["The Tulip Set", "A light grey cardigan over a black dress adorned with two tulips.",
+      "This craft adorns the house; this craft is Rafeef's heart. Two gingham tulips at the waist, and a light cardigan with visible stitching and a little flower on the cuff.",
+      "Cotton & linen"] },
   { img: "denim-shirt", cat: "shirts",
-    ar: ["قميص اللطافة", "دنيم فاتح بتطريزٍ متقاطع يشبه مفارش الجدّات."],
-    en: ["The Gentle Shirt", "Light denim with cross-stitch like a grandmother's tablecloth."] },
-  { img: "kantha-top", cat: "shirts",
-    ar: ["بلوزة الحكاية", "قماشٌ مطبوع بالقوالب، وصدرٌ أبيض بغرز الكانثا والورد."],
-    en: ["The Storyteller Blouse", "Block-printed cotton with a white kantha-stitched bib and roses."] },
+    ar: ["قميص اللطافة", "دنيم فاتح بتطريزٍ متقاطع يشبه مفارش الجدّات.",
+      "من «قمصان اللطافة». تطريزٌ متقاطع بالورد والأوراق على صدرٍ مكشكش، يذكّرنا بمفارش الجدّات وعصريّات الشتاء.",
+      "دنيم قطني خفيف"],
+    en: ["The Gentle Shirt", "Light denim with cross-stitch like a grandmother's tablecloth.",
+      "From our “gentle shirts”. Cross-stitched roses and leaves on a gathered yoke — like a grandmother's tablecloth and winter afternoons.",
+      "Light cotton denim"] },
+  { img: "kantha-top", cat: "shirts", season: true,
+    ar: ["بلوزة الحكاية", "قماشٌ مطبوع بالقوالب، وصدرٌ أبيض بغرز الكانثا والورد.",
+      "التطريز في دارنا كثير. قماشٌ مطبوع بالقوالب، وصدرٌ أبيض مُغرَّز بخيوط الكانثا، تتوسطه زهرتان مطرّزتان وحافةٌ حمراء مكشكشة.",
+      "قطن مطبوع بالقوالب"],
+    en: ["The Storyteller Blouse", "Block-printed cotton with a white kantha-stitched bib and roses.",
+      "There is a lot of embroidery in our house. Block-printed cotton, a white bib quilted in kantha stitch, two embroidered flowers and a ruffled red edge.",
+      "Block-printed cotton"] },
   { img: "embroidered-jackets", cat: "jackets",
-    ar: ["سترات الحديقة", "حديقةٌ كاملة مطرّزة على قماشٍ أبيض."],
-    en: ["Garden Jackets", "A whole garden embroidered on white cloth."] },
+    ar: ["سترات الحديقة", "حديقةٌ كاملة مطرّزة على قماشٍ أبيض.",
+      "على كل سترة حديقة مختلفة: ورود، أغصان، وأوراق خضراء. تُلبس فوق فستان بسيط فتصير هي الحكاية.",
+      "قطن سميك"],
+    en: ["Garden Jackets", "A whole garden embroidered on white cloth.",
+      "Each jacket carries a different garden: roses, branches and green leaves. Wear it over a simple dress and it becomes the story.",
+      "Heavy cotton"] },
   { img: "tulip-dress", cat: "dresses",
-    ar: ["فستان التوليب الليلي", "أسودُ هادئ، وصفٌّ من التوليب الورديّ عند الخصر."],
-    en: ["Night Tulip Dress", "Quiet black with a row of pink tulips at the waist."] },
+    ar: ["فستان التوليب الليلي", "أسودُ هادئ، وصفٌّ من التوليب الورديّ عند الخصر.",
+      "فستان بلا أكمام يُلبس فوق قميص أو تحت سترة. صفٌّ من زهور التوليب الوردية يلتفّ حول الخصر كحزامٍ من حديقة.",
+      "كتّان"],
+    en: ["Night Tulip Dress", "Quiet black with a row of pink tulips at the waist.",
+      "A sleeveless dress to layer over a shirt or under a jacket. A row of pink tulips wraps the waist like a belt from the garden.",
+      "Linen"] },
   { img: "blue-dress", cat: "dresses",
-    ar: ["فستان السماء", "أزرقُ صافٍ، ووردةٌ واحدة تكفي."],
-    en: ["Sky Dress", "Clear blue — and a single rose is enough."] },
+    ar: ["فستان السماء", "أزرقُ صافٍ، ووردةٌ واحدة تكفي.",
+      "قطعتان بلون السماء: بلوزة واسعة وفستان طويل، ووردةٌ واحدة مطرّزة تكفي لتقول كل شيء.",
+      "قطن"],
+    en: ["Sky Dress", "Clear blue — and a single rose is enough.",
+      "Two sky-coloured layers: a loose top and a long dress — and one embroidered rose says everything.",
+      "Cotton"] },
   { img: "floral-dresses", cat: "dresses",
-    ar: ["فساتين الربيع", "زهورٌ صغيرة وحوافّ مخرّمة كنسيم نيسان."],
-    en: ["Spring Dresses", "Tiny blooms and scalloped hems, like an April breeze."] },
+    ar: ["فساتين الربيع", "زهورٌ صغيرة وحوافّ مخرّمة كنسيم نيسان.",
+      "قماشٌ أبيض مزهّر بحوافّ مخرّمة، خفيفٌ كنسيم نيسان. لكل فستان زهرته ولونه.",
+      "قطن خفيف"],
+    en: ["Spring Dresses", "Tiny blooms and scalloped hems, like an April breeze.",
+      "White floral cloth with scalloped hems, light as an April breeze. Each dress has its own flower and colour.",
+      "Light cotton"] },
   { img: "pink-dress", cat: "dresses",
-    ar: ["فستان الورد المجفّف", "ياقةٌ مستديرة وشرائط وردية على قماشٍ مزهّر."],
-    en: ["Dried Rose Dress", "A rounded collar and rose ribbons on a floral print."] },
+    ar: ["فستان الورد المجفّف", "ياقةٌ مستديرة وشرائط وردية على قماشٍ مزهّر.",
+      "ياقةٌ مستديرة بيضاء، وشرائط وردية تنزل على الصدر، وتنورة مزهّرة بلون الورد حين يجفّ بين صفحات كتاب.",
+      "قطن مزهّر"],
+    en: ["Dried Rose Dress", "A rounded collar and rose ribbons on a floral print.",
+      "A rounded white collar, pink ribbons down the bodice, and a floral skirt the colour of a rose dried between book pages.",
+      "Floral cotton"] },
   { img: "pattern-dress", cat: "dresses",
-    ar: ["فستان النافذة", "نقشةٌ هندسية ناعمة وياقةٌ بيضاء صغيرة."],
-    en: ["Window Dress", "A soft geometric print with a small white collar."] },
-  { img: "linen-rack", cat: "dresses",
-    ar: ["فستان الكتّان الطويل", "كتّانٌ طبيعيّ بأزرارٍ داكنة وأكمامٍ منفوخة."],
-    en: ["Long Linen Dress", "Natural linen with dark buttons and gathered sleeves."] },
+    ar: ["فستان النافذة", "نقشةٌ هندسية ناعمة وياقةٌ بيضاء صغيرة.",
+      "نقشة تشبه زجاج النوافذ القديمة، بأزرق ورماديّ هادئين، وياقة بيضاء صغيرة تضيء الوجه.",
+      "قطن مطبوع"],
+    en: ["Window Dress", "A soft geometric print with a small white collar.",
+      "A print like old window glass in calm blue and grey, with a small white collar that lights up the face.",
+      "Printed cotton"] },
+  { img: "linen-rack", cat: "dresses", season: true,
+    ar: ["فستان الكتّان الطويل", "كتّانٌ طبيعيّ بأزرارٍ داكنة وأكمامٍ منفوخة.",
+      "كتّان بلونه الطبيعي، وصفّ طويل من الأزرار الداكنة، وأكمام منفوخة تنتهي بكشكش ناعم.",
+      "كتّان طبيعي"],
+    en: ["Long Linen Dress", "Natural linen with dark buttons and gathered sleeves.",
+      "Linen in its natural colour, a long row of dark buttons, and full sleeves that end in a soft ruffle.",
+      "Natural linen"] },
   { img: "striped-shirts", cat: "shirts",
-    ar: ["قمصان الصباح", "خطوطٌ ودنيم، وتطريزٌ صغير كالتوقيع."],
-    en: ["Morning Shirts", "Stripes and denim, with a little embroidery like a signature."] },
+    ar: ["قمصان الصباح", "خطوطٌ ودنيم، وتطريزٌ صغير كالتوقيع.",
+      "قمصان واسعة لصباحات العمل والمشاوير، على كل واحدٍ منها تطريز صغير كأنه توقيع الدار.",
+      "قطن ودنيم"],
+    en: ["Morning Shirts", "Stripes and denim, with a little embroidery like a signature.",
+      "Loose shirts for workday mornings and errands, each with a small embroidery like the house's signature.",
+      "Cotton & denim"] },
   { img: "pastel-shirts", cat: "shirts",
-    ar: ["قمصان الألوان الهادئة", "ورديّ، خوخيّ، رماديّ وزيتيّ — لكل مزاجٍ قميص."],
-    en: ["Quiet Colour Shirts", "Pink, peach, grey and olive — a shirt for every mood."] },
+    ar: ["قمصان الألوان الهادئة", "ورديّ، خوخيّ، رماديّ وزيتيّ — لكل مزاجٍ قميص.",
+      "القصّة نفسها بأربعة ألوان هادئة. اختاري لون مزاجكِ، أو خذي اثنين.",
+      "قطن ناعم"],
+    en: ["Quiet Colour Shirts", "Pink, peach, grey and olive — a shirt for every mood.",
+      "One cut in four quiet colours. Choose the colour of your mood — or take two.",
+      "Soft cotton"] },
 ];
 
 let lang = "ar";
@@ -189,20 +286,26 @@ const t = (key) => STRINGS[lang][key] ?? key;
 const waLink = (text) =>
   `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`;
 
+const visibleProducts = () =>
+  PRODUCTS.filter((p) =>
+    filter === "all" ? true : filter === "season" ? p.season : p.cat === filter
+  );
+
 function renderProducts() {
   const grid = document.getElementById("products");
-  const items = PRODUCTS.filter((p) => filter === "all" || p.cat === filter);
-  grid.innerHTML = items
+  grid.innerHTML = visibleProducts()
     .map((p) => {
       const [name, desc] = p[lang];
       return `
         <article class="product">
-          <div class="arch stitch">
-            <img src="img/${p.img}.jpg" alt="${name}" loading="lazy" />
-          </div>
+          <button type="button" class="product-open" data-open="${p.img}">
+            <div class="arch stitch" data-hint="${t("product.hint")}">
+              <img src="img/${p.img}.jpg" alt="${name}" loading="lazy" />
+            </div>
+          </button>
           <div class="product-body">
-            <span class="product-tag">${t("product.tag")}</span>
-            <h3>${name}</h3>
+            <span class="product-tag">${p.season ? t("qv.season") : t("product.tag")}</span>
+            <h3><button type="button" class="product-open" data-open="${p.img}">${name}</button></h3>
             <p>${desc}</p>
             <a class="product-cta" href="${waLink(t("wa.piece") + name)}" target="_blank" rel="noopener">
               <svg aria-hidden="true"><use href="#wa"/></svg>${t("product.cta")}
@@ -211,6 +314,68 @@ function renderProducts() {
         </article>`;
     })
     .join("");
+}
+
+// ---------- Quick view ----------
+let qvIndex = 0;
+const qv = document.getElementById("quickview");
+
+function fillQuickView() {
+  const list = visibleProducts();
+  const p = list[qvIndex];
+  const [name, , story, fabric] = p[lang];
+  const img = document.getElementById("qvImg");
+  img.src = `img/${p.img}.jpg`;
+  img.alt = name;
+  document.getElementById("qvName").textContent = name;
+  document.getElementById("qvStory").textContent = story;
+  document.getElementById("qvFabric").textContent = fabric;
+  document.getElementById("qvTag").textContent = p.season ? t("qv.season") : t("product.tag");
+  document.getElementById("qvCount").textContent = `${qvIndex + 1} / ${list.length}`;
+  document.getElementById("qvWa").href = waLink(t("wa.piece") + name);
+}
+
+function openQuickView(imgKey) {
+  qvIndex = Math.max(0, visibleProducts().findIndex((p) => p.img === imgKey));
+  fillQuickView();
+  if (typeof qv.showModal === "function") qv.showModal();
+  else qv.setAttribute("open", "");
+  document.body.classList.add("qv-open");
+}
+
+function stepQuickView(dir) {
+  const n = visibleProducts().length;
+  qvIndex = (qvIndex + dir + n) % n;
+  fillQuickView();
+}
+
+function setupQuickView() {
+  document.getElementById("products").addEventListener("click", (e) => {
+    const btn = e.target.closest("[data-open]");
+    if (btn) openQuickView(btn.dataset.open);
+  });
+  document.getElementById("qvClose").addEventListener("click", () => qv.close());
+  document.getElementById("qvPrev").addEventListener("click", () => stepQuickView(-1));
+  document.getElementById("qvNext").addEventListener("click", () => stepQuickView(1));
+  qv.addEventListener("click", (e) => {
+    if (e.target === qv) qv.close();
+  });
+  qv.addEventListener("close", () => document.body.classList.remove("qv-open"));
+  qv.addEventListener("keydown", (e) => {
+    const rtl = document.documentElement.dir === "rtl";
+    if (e.key === "ArrowRight") stepQuickView(rtl ? -1 : 1);
+    if (e.key === "ArrowLeft") stepQuickView(rtl ? 1 : -1);
+  });
+}
+
+function setFilter(next) {
+  filter = next;
+  document.querySelectorAll(".chip").forEach((c) => {
+    const on = c.dataset.filter === next;
+    c.classList.toggle("is-active", on);
+    c.setAttribute("aria-pressed", String(on));
+  });
+  renderProducts();
 }
 
 function applyLang(next) {
@@ -240,6 +405,7 @@ function applyLang(next) {
   toggle.setAttribute("aria-label", lang === "ar" ? "Switch to English" : "التبديل إلى العربية");
 
   renderProducts();
+  if (qv.open) fillQuickView();
   try {
     localStorage.setItem("rafa-lang", lang);
   } catch (e) {}
@@ -247,15 +413,11 @@ function applyLang(next) {
 
 function setupFilters() {
   document.querySelectorAll(".chip").forEach((chip) => {
-    chip.addEventListener("click", () => {
-      filter = chip.dataset.filter;
-      document.querySelectorAll(".chip").forEach((c) => {
-        const on = c === chip;
-        c.classList.toggle("is-active", on);
-        c.setAttribute("aria-pressed", String(on));
-      });
-      renderProducts();
-    });
+    chip.addEventListener("click", () => setFilter(chip.dataset.filter));
+  });
+  document.getElementById("seasonBtn").addEventListener("click", () => {
+    setFilter("season");
+    document.getElementById("rooms").scrollIntoView({ behavior: "smooth" });
   });
 }
 
@@ -303,6 +465,7 @@ try {
 applyLang(saved === "en" ? "en" : "ar");
 setupFilters();
 setupMenu();
+setupQuickView();
 setupReveal();
 
 document.getElementById("langToggle").addEventListener("click", () => {
