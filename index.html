@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="no-js">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>دار رفا · Rafa Atelier</title>
+  <meta name="description" content="دار رفا؛ نحنُ حِبكةُ الخيط الطبيعي. أزياء محتشمة مطرّزة ومحاكة يدويًا في لبنان." />
+  <link rel="icon" href="img/logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Reusable hand-drawn motifs -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="sprig" viewBox="0 0 60 120">
+      <path d="M30 118 C29 90 31 60 30 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      <path d="M30 92 C18 88 10 78 9 66 C21 68 29 78 30 92Z" fill="currentColor" opacity=".55"/>
+      <path d="M30 70 C42 66 50 56 51 44 C39 46 31 56 30 70Z" fill="currentColor" opacity=".55"/>
+      <path d="M30 48 C20 44 14 36 13 26 C23 28 29 36 30 48Z" fill="currentColor" opacity=".55"/>
+      <circle cx="30" cy="8" r="5" fill="var(--rose)"/>
+    </symbol>
+    <symbol id="flower" viewBox="0 0 40 40">
+      <g fill="var(--rose)" opacity=".85">
+        <ellipse cx="20" cy="9" rx="6" ry="8"/><ellipse cx="20" cy="31" rx="6" ry="8"/>
+        <ellipse cx="9" cy="20" rx="8" ry="6"/><ellipse cx="31" cy="20" rx="8" ry="6"/>
+      </g>
+      <circle cx="20" cy="20" r="5" fill="var(--wood)"/>
+    </symbol>
+    <symbol id="wa" viewBox="0 0 24 24">
+      <path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.3-.4.8-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.1 5.1 0 0 0 1.1 2.7 11.6 11.6 0 0 0 4.4 3.9c1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3Z"/>
+    </symbol>
+    <symbol id="ig" viewBox="0 0 24 24">
+      <rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.8"/>
+      <circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.8"/>
+      <circle cx="17.3" cy="6.7" r="1.1" fill="currentColor"/>
+    </symbol>
+  </svg>
+
+  <!-- Header -->
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a href="#top" class="brand">
+        <img src="img/logo.png" alt="" width="44" height="44" />
+        <span class="brand-name" data-i18n="brand">دار رفا</span>
+      </a>
+      <nav class="nav" id="nav" aria-label="Main">
+        <a href="#rooms" data-i18n="nav.rooms">غرف الدار</a>
+        <a href="#handmade" data-i18n="nav.handmade">الحياكة اليدوية</a>
+        <a href="#hills" data-i18n="nav.hills">على التلال</a>
+        <a href="#talks" data-i18n="nav.talks">أحاديث لطيفة</a>
+        <a href="#order" data-i18n="nav.order">كيف تطلبين</a>
+      </nav>
+      <div class="header-actions">
+        <button class="lang-toggle" id="langToggle" type="button" aria-label="Switch language">EN</button>
+        <button class="menu-toggle" id="menuToggle" type="button" aria-expanded="false" aria-controls="nav" aria-label="Menu">
+          <span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-text reveal">
+          <p class="eyebrow" data-i18n="hero.eyebrow">أتيليه رفا · لبنان</p>
+          <h1 class="hero-title" data-i18n-html="hero.title">دارُ رفا؛<br>نحنُ حِبكةُ الخيط الطبيعي.</h1>
+          <p class="hero-lead" data-i18n="hero.lead">رفا؛ دارٌ يمنحكِ قصصًا وأسلوب حياة. قطعٌ محتشمة من الكتّان والقطن، تُطرَّز وتُحاك يدويًا، قطعةً قطعة.</p>
+          <div class="hero-cta">
+            <a href="#rooms" class="btn btn-primary" data-i18n="hero.cta">ادخلي الدار</a>
+            <a href="#" class="btn btn-ghost js-wa" data-wa-general>
+              <svg class="icon"><use href="#wa"/></svg>
+              <span data-i18n="cta.whatsapp">اطلبي عبر واتساب</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-art reveal">
+          <div class="arch arch-main stitch">
+            <img src="img/life-hills.jpg" alt="" data-i18n-alt="alt.hills" />
+          </div>
+          <div class="hero-round stitch">
+            <img src="img/life-sitting.jpg" alt="" data-i18n-alt="alt.sitting" />
+          </div>
+          <svg class="hero-sprig" aria-hidden="true"><use href="#sprig"/></svg>
+          <div class="rafeef">
+            <img src="img/hl-4.png" alt="" data-i18n-alt="alt.rafeef" class="rafeef-img" />
+            <p class="bubble" data-i18n="hero.bubble">أهلًا بكِ! أنا رفيف، سأرافقكِ في الجولة.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Values ribbon -->
+    <div class="ribbon" aria-hidden="true">
+      <div class="ribbon-track">
+        <span data-i18n="val.1">خيطٌ طبيعي</span><svg><use href="#flower"/></svg>
+        <span data-i18n="val.2">حياكة يدوية</span><svg><use href="#flower"/></svg>
+        <span data-i18n="val.3">تطريز بالإبرة</span><svg><use href="#flower"/></svg>
+        <span data-i18n="val.4">صُنع في لبنان</span><svg><use href="#flower"/></svg>
+        <span data-i18n="val.5">قطع محدودة</span><svg><use href="#flower"/></svg>
+        <span data-i18n="val.1">خيطٌ طبيعي</span><svg><use href="#flower"/></svg>
+        <span data-i18n="val.2">حياكة يدوية</span><svg><use href="#flower"/></svg>
+        <span data-i18n="val.3">تطريز بالإبرة</span><svg><use href="#flower"/></svg>
+        <span data-i18n="val.4">صُنع في لبنان</span><svg><use href="#flower"/></svg>
+        <span data-i18n="val.5">قطع محدودة</span><svg><use href="#flower"/></svg>
+      </div>
+    </div>
+
+    <!-- Rooms / collection -->
+    <section class="section" id="rooms">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow" data-i18n="rooms.eyebrow">غرف الدار</p>
+          <h2 class="section-title" data-i18n="rooms.title">كل غرفةٍ حكاية، وكل قطعةٍ ضيفة.</h2>
+          <div class="stitch-line" aria-hidden="true"><svg><use href="#flower"/></svg></div>
+        </header>
+
+        <div class="filters reveal" role="group" aria-label="Filter">
+          <button type="button" class="chip is-active" data-filter="all" aria-pressed="true" data-i18n="f.all">الكل</button>
+          <button type="button" class="chip" data-filter="dresses" aria-pressed="false" data-i18n="f.dresses">الفساتين</button>
+          <button type="button" class="chip" data-filter="sets" aria-pressed="false" data-i18n="f.sets">الأطقم</button>
+          <button type="button" class="chip" data-filter="shirts" aria-pressed="false" data-i18n="f.shirts">القمصان</button>
+          <button type="button" class="chip" data-filter="jackets" aria-pressed="false" data-i18n="f.jackets">السترات</button>
+        </div>
+
+        <div class="products" id="products"></div>
+      </div>
+    </section>
+
+    <!-- Handmade -->
+    <section class="section section-tint" id="handmade">
+      <div class="container handmade-grid">
+        <div class="handmade-media reveal">
+          <div class="arch stitch"><img src="img/kantha-top.jpg" alt="" data-i18n-alt="alt.kantha" /></div>
+          <img src="img/hl-3.png" alt="" class="handmade-badge" />
+        </div>
+        <div class="handmade-text reveal">
+          <p class="eyebrow" data-i18n="hm.eyebrow">حياكة يدوية</p>
+          <h2 class="section-title" data-i18n="hm.title">السحرُ هنا من كل البلاد، والحياكةُ يدوية.</h2>
+          <p class="section-lead" data-i18n="hm.lead">نستلهم من غرزِ الشعوب وأقمشتها — الكانثا، التطريز المتقاطع، طباعة القوالب — ونجمعها بين جدران دارنا في لبنان.</p>
+          <ol class="steps">
+            <li>
+              <span class="step-num">1</span>
+              <div><h3 data-i18n="hm.s1t">نختار الخيط</h3><p data-i18n="hm.s1">كتّانٌ وقطنٌ طبيعيّان، يتنفّسان معكِ.</p></div>
+            </li>
+            <li>
+              <span class="step-num">2</span>
+              <div><h3 data-i18n="hm.s2t">نرسم ونطرّز</h3><p data-i18n="hm.s2">كلُّ زهرةٍ تُرسم أولًا، ثم تُطرَّز بالإبرة.</p></div>
+            </li>
+            <li>
+              <span class="step-num">3</span>
+              <div><h3 data-i18n="hm.s3t">نحيك قطعتكِ</h3><p data-i18n="hm.s3">قطعٌ محدودة، تُخاط بتمهّلٍ وحب.</p></div>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- Hills lookbook -->
+    <section class="section" id="hills">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow" data-i18n="hills.eyebrow">على التلال</p>
+          <h2 class="section-title" data-i18n="hills.title">أنني فراشة.</h2>
+          <p class="section-lead" data-i18n="hills.lead">قطعُ رفا خارج الدار، بين الريح والزعتر وتلال لبنان.</p>
+        </header>
+        <div class="lookbook">
+          <figure class="look reveal"><div class="arch stitch"><img src="img/life-butterfly.jpg" alt="" data-i18n-alt="alt.butterfly" loading="lazy" /></div></figure>
+          <figure class="look look-mid reveal"><div class="arch stitch"><img src="img/grey-dress.jpg" alt="" data-i18n-alt="alt.grey" loading="lazy" /></div></figure>
+          <figure class="look reveal"><div class="arch stitch"><img src="img/life-hills.jpg" alt="" data-i18n-alt="alt.hills" loading="lazy" /></div></figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gentle talks -->
+    <section class="section section-tint" id="talks">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow" data-i18n="talks.eyebrow">أحاديث لطيفة</p>
+          <h2 class="section-title" data-i18n="talks.title">حكاياتٌ من طاولة الخياطة.</h2>
+        </header>
+        <div class="talks">
+          <article class="talk reveal">
+            <img src="img/hl-1.png" alt="" class="talk-img round" loading="lazy" />
+            <h3 data-i18n="t1.t">رفيف بين الزهور</h3>
+            <p data-i18n="t1.p">عن الأزهار البرّية التي تُلهم تطريزنا، وكيف تنتقل من الحقل إلى القماش.</p>
+            <a href="#" class="link" data-i18n="talks.more">اقرئي الحكاية</a>
+          </article>
+          <article class="talk reveal">
+            <img src="img/hl-2.png" alt="" class="talk-img round" loading="lazy" />
+            <h3 data-i18n="t2.t">لماذا الكتّان؟</h3>
+            <p data-i18n="t2.p">قماشٌ يكبر معكِ، ويزداد لينًا مع كل غسلة.</p>
+            <a href="#" class="link" data-i18n="talks.more">اقرئي الحكاية</a>
+          </article>
+          <article class="talk reveal">
+            <img src="img/journal-writing.jpg" alt="" class="talk-img round" loading="lazy" />
+            <h3 data-i18n="t3.t">كيف تعتنين بقطعتكِ</h3>
+            <p data-i18n="t3.p">نصائح بسيطة لتعيش قطعتكِ المطرّزة سنواتٍ طويلة.</p>
+            <a href="#" class="link" data-i18n="talks.more">اقرئي الحكاية</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Order -->
+    <section class="section" id="order">
+      <div class="container order-card reveal">
+        <svg class="order-sprig start" aria-hidden="true"><use href="#sprig"/></svg>
+        <svg class="order-sprig end" aria-hidden="true"><use href="#sprig"/></svg>
+        <p class="eyebrow" data-i18n="order.eyebrow">كيف تطلبين</p>
+        <h2 class="section-title" data-i18n="order.title">ثلاث خطوات، وفنجان قهوة.</h2>
+        <ol class="order-steps">
+          <li><span>1</span><p data-i18n="order.1">اختاري قطعتكِ من غرف الدار.</p></li>
+          <li><span>2</span><p data-i18n="order.2">راسلينا على واتساب أو إنستغرام مع مقاسكِ.</p></li>
+          <li><span>3</span><p data-i18n="order.3">نحيكها ونوصلها إليكِ، في لبنان وخارجه.</p></li>
+        </ol>
+        <div class="hero-cta center">
+          <a href="#" class="btn btn-primary js-wa" data-wa-general>
+            <svg class="icon"><use href="#wa"/></svg>
+            <span data-i18n="cta.whatsapp">اطلبي عبر واتساب</span>
+          </a>
+          <a href="https://www.instagram.com/rafa_atelier.lb" target="_blank" rel="noopener" class="btn btn-ghost">
+            <svg class="icon"><use href="#ig"/></svg>
+            <span>@rafa_atelier.lb</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <a href="#top" class="brand">
+        <img src="img/logo.png" alt="" width="44" height="44" />
+        <span class="brand-name" data-i18n="brand">دار رفا</span>
+      </a>
+      <p class="footer-home" data-i18n="footer.home">بيتُنا في لبنان.</p>
+      <p class="footer-note" data-i18n="footer.note">© 2026 دار رفا — نسخة تجريبية</p>
+    </div>
+  </footer>
+
+  <a href="#" class="wa-float js-wa" data-wa-general aria-label="WhatsApp">
+    <svg><use href="#wa"/></svg>
+  </a>
+
+  <script src="app.js"></script>
+</body>
+</html>
