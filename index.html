@@ -1,310 +1,130 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl" class="no-js">
+<!doctype html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>دار رفا · Rafa Atelier</title>
-  <meta name="description" content="دار رفا؛ نحنُ حِبكةُ الخيط الطبيعي. أزياء محتشمة مطرّزة ومحاكة يدويًا في لبنان." />
-  <link rel="icon" href="img/logo.png" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dark Perfumes</title>
+  <meta name="description" content="Dark Perfumes — 200+ fragrances from 6$, delivered to every region in Lebanon. Order on WhatsApp.">
+  <link rel="icon" href="img/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500&family=Tajawal:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <!-- Reusable hand-drawn motifs -->
-  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
-    <symbol id="sprig" viewBox="0 0 60 120">
-      <path d="M30 118 C29 90 31 60 30 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-      <path d="M30 92 C18 88 10 78 9 66 C21 68 29 78 30 92Z" fill="currentColor" opacity=".55"/>
-      <path d="M30 70 C42 66 50 56 51 44 C39 46 31 56 30 70Z" fill="currentColor" opacity=".55"/>
-      <path d="M30 48 C20 44 14 36 13 26 C23 28 29 36 30 48Z" fill="currentColor" opacity=".55"/>
-      <circle cx="30" cy="8" r="5" fill="var(--rose)"/>
-    </symbol>
-    <symbol id="flower" viewBox="0 0 40 40">
-      <g fill="var(--rose)" opacity=".85">
-        <ellipse cx="20" cy="9" rx="6" ry="8"/><ellipse cx="20" cy="31" rx="6" ry="8"/>
-        <ellipse cx="9" cy="20" rx="8" ry="6"/><ellipse cx="31" cy="20" rx="8" ry="6"/>
-      </g>
-      <circle cx="20" cy="20" r="5" fill="var(--wood)"/>
-    </symbol>
-    <symbol id="wa" viewBox="0 0 24 24">
-      <path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.3-.4.8-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.1 5.1 0 0 0 1.1 2.7 11.6 11.6 0 0 0 4.4 3.9c1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3Z"/>
-    </symbol>
-    <symbol id="acorn" viewBox="0 0 64 64">
-      <path d="M32 6 C33 10 36 12 40 12" fill="none" stroke="var(--wood)" stroke-width="2.5" stroke-linecap="round"/>
-      <path d="M12 26 C12 16 22 11 32 11 C42 11 52 16 52 26 Z" fill="var(--wood)"/>
-      <path d="M16 28 H48 C48 44 40 56 32 58 C24 56 16 44 16 28 Z" fill="var(--rose)" opacity=".85"/>
-      <path d="M18 22 H46" stroke="var(--linen)" stroke-width="1.5" stroke-dasharray="3 3"/>
-    </symbol>
-    <symbol id="close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
-    <symbol id="chev" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
-    <symbol id="ig" viewBox="0 0 24 24">
-      <rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.8"/>
-      <circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.8"/>
-      <circle cx="17.3" cy="6.7" r="1.1" fill="currentColor"/>
-    </symbol>
-  </svg>
-
-  <!-- Header -->
-  <header class="site-header" id="top">
-    <div class="container header-inner">
-      <a href="#top" class="brand">
-        <img src="img/logo.png" alt="" width="44" height="44" />
-        <span class="brand-name" data-i18n="brand">دار رفا</span>
-      </a>
-      <nav class="nav" id="nav" aria-label="Main">
-        <a href="#rooms" data-i18n="nav.rooms">غرف الدار</a>
-        <a href="#handmade" data-i18n="nav.handmade">الحياكة اليدوية</a>
-        <a href="#hills" data-i18n="nav.hills">على التلال</a>
-        <a href="#talks" data-i18n="nav.talks">أحاديث لطيفة</a>
-        <a href="#order" data-i18n="nav.order">كيف تطلبين</a>
-      </nav>
-      <div class="header-actions">
-        <button class="lang-toggle" id="langToggle" type="button" aria-label="Switch language">EN</button>
-        <button class="menu-toggle" id="menuToggle" type="button" aria-expanded="false" aria-controls="nav" aria-label="Menu">
-          <span></span><span></span>
-        </button>
-      </div>
-    </div>
+  <header class="nav">
+    <a class="brand" href="#top" aria-label="Dark Perfumes home">
+      <img src="img/logo.png" alt="" width="40" height="40">
+      <span>Dark<em>Perfumes</em></span>
+    </a>
+    <nav class="nav-links" aria-label="Main">
+      <a href="#shop">Shop</a>
+      <a href="#signature">Signature</a>
+      <a href="#order">How to order</a>
+    </nav>
+    <button class="bag-btn" id="bagBtn" aria-label="Open bag">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 8h12l-1 12H7L6 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+      <span class="bag-count" id="bagCount">0</span>
+    </button>
   </header>
 
-  <main>
-    <!-- Hero -->
+  <main id="top">
+    <!-- HERO: a single bottle in a pool of light -->
     <section class="hero">
-      <div class="container hero-grid">
-        <div class="hero-text reveal">
-          <p class="eyebrow" data-i18n="hero.eyebrow">أتيليه رفا · لبنان</p>
-          <h1 class="hero-title" data-i18n-html="hero.title">دارُ رفا؛<br>نحنُ حِبكةُ الخيط الطبيعي.</h1>
-          <p class="hero-lead" data-i18n="hero.lead">رفا؛ دارٌ يمنحكِ قصصًا وأسلوب حياة. قطعٌ محتشمة من الكتّان والقطن، تُطرَّز وتُحاك يدويًا، قطعةً قطعة.</p>
-          <div class="hero-cta">
-            <a href="#rooms" class="btn btn-primary" data-i18n="hero.cta">ادخلي الدار</a>
-            <a href="#" class="btn btn-ghost js-wa" data-wa-general>
-              <svg class="icon"><use href="#wa"/></svg>
-              <span data-i18n="cta.whatsapp">اطلبي عبر واتساب</span>
-            </a>
-          </div>
-        </div>
-
-        <div class="hero-art reveal">
-          <div class="arch arch-main stitch">
-            <img src="img/life-hills.jpg" alt="" data-i18n-alt="alt.hills" />
-          </div>
-          <div class="hero-round stitch">
-            <img src="img/grey-dress.jpg" alt="" data-i18n-alt="alt.grey" />
-          </div>
-          <svg class="hero-sprig" aria-hidden="true"><use href="#sprig"/></svg>
-          <div class="rafeef">
-            <img src="img/hl-4.png" alt="" data-i18n-alt="alt.rafeef" class="rafeef-img" />
-            <p class="bubble" data-i18n="hero.bubble">أهلًا بكِ! أنا رفيف، سأرافقكِ في الجولة.</p>
-          </div>
+      <div class="hero-light" aria-hidden="true"></div>
+      <div class="hero-copy">
+        <p class="eyebrow">Beirut · Est. on TikTok</p>
+        <h1>The scent<br><i>you're known for,</i><br>from 6$</h1>
+        <p class="lede">More than 200 fragrances, delivered to every region in Lebanon.</p>
+        <p class="lede ar" lang="ar" dir="rtl">التوصيل لجميع المناطق اللبنانية · لدينا أكثر من 200 صنف</p>
+        <div class="hero-cta">
+          <a class="btn btn-gold" href="#shop">Explore the collection</a>
+          <a class="btn btn-ghost" id="heroWa" href="#" target="_blank" rel="noopener">WhatsApp 76 620 466</a>
         </div>
       </div>
+      <figure class="hero-bottle">
+        <img id="heroImg" alt="Le Male Elixir bottle" referrerpolicy="no-referrer">
+        <figcaption>Le Male Elixir — <span>367K views</span></figcaption>
+      </figure>
     </section>
 
-    <!-- Values ribbon -->
-    <div class="ribbon" aria-hidden="true">
-      <div class="ribbon-track">
-        <span data-i18n="val.1">خيطٌ طبيعي</span><svg><use href="#flower"/></svg>
-        <span data-i18n="val.2">حياكة يدوية</span><svg><use href="#flower"/></svg>
-        <span data-i18n="val.3">تطريز بالإبرة</span><svg><use href="#flower"/></svg>
-        <span data-i18n="val.4">صُنع في لبنان</span><svg><use href="#flower"/></svg>
-        <span data-i18n="val.5">قطع محدودة</span><svg><use href="#flower"/></svg>
-        <span data-i18n="val.1">خيطٌ طبيعي</span><svg><use href="#flower"/></svg>
-        <span data-i18n="val.2">حياكة يدوية</span><svg><use href="#flower"/></svg>
-        <span data-i18n="val.3">تطريز بالإبرة</span><svg><use href="#flower"/></svg>
-        <span data-i18n="val.4">صُنع في لبنان</span><svg><use href="#flower"/></svg>
-        <span data-i18n="val.5">قطع محدودة</span><svg><use href="#flower"/></svg>
-      </div>
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker-track" id="ticker"></div>
     </div>
 
-    <!-- Season banner (from her latest caption) -->
-    <section class="season">
-      <div class="container season-card reveal">
-        <svg class="season-acorn" aria-hidden="true"><use href="#acorn"/></svg>
-        <div class="season-text">
-          <p class="eyebrow" data-i18n="season.eyebrow">موسم جديد في الدار</p>
-          <p class="season-quote" data-i18n="season.quote">يدخل اللون البني، موسم البلوط واليقطين…</p>
-        </div>
-        <button type="button" class="btn btn-primary" id="seasonBtn" data-i18n="season.cta">شاهدي قطع الموسم</button>
-        <img src="img/vest-set.jpg" alt="" class="season-img" data-i18n-alt="alt.vest" />
+    <!-- SHOP -->
+    <section class="shop" id="shop">
+      <div class="section-head">
+        <p class="eyebrow">The collection</p>
+        <h2>Chosen in the dark</h2>
+      </div>
+      <div class="filters" role="tablist" aria-label="Filter">
+        <button class="chip is-on" data-filter="all">All</button>
+        <button class="chip" data-filter="men">For him</button>
+        <button class="chip" data-filter="women">For her</button>
+        <button class="chip" data-filter="best">Most viewed</button>
+        <label class="search">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6"/><path d="m20 20-4.5-4.5"/></svg>
+          <input id="search" type="search" placeholder="Search a scent" aria-label="Search a scent">
+        </label>
+      </div>
+      <div class="grid" id="grid"></div>
+    </section>
+
+    <!-- SIGNATURE -->
+    <section class="signature" id="signature">
+      <div class="sig-img"><img id="sigImg" alt="Stronger With You Absolutely bottle" referrerpolicy="no-referrer"></div>
+      <div class="sig-copy">
+        <p class="eyebrow">Signature of the season</p>
+        <h2>Stronger With You<br><i>Absolutely</i></h2>
+        <p>Rum, glazed chestnut and warm vanilla. The bottle our followers ask about most after dark.</p>
+        <dl class="notes">
+          <div><dt>Top</dt><dd>Bergamot · Rum · Elemi</dd></div>
+          <div><dt>Heart</dt><dd>Lavender · Davana</dd></div>
+          <div><dt>Base</dt><dd>Chestnut · Cedar · Vanilla</dd></div>
+        </dl>
+        <button class="btn btn-gold" data-add="swy-absolutely">Add to bag — 7$</button>
       </div>
     </section>
 
-    <!-- Rooms / collection -->
-    <section class="section" id="rooms">
-      <div class="container">
-        <header class="section-head reveal">
-          <p class="eyebrow" data-i18n="rooms.eyebrow">غرف الدار</p>
-          <h2 class="section-title" data-i18n="rooms.title">كل غرفةٍ حكاية، وكل قطعةٍ ضيفة.</h2>
-          <div class="stitch-line" aria-hidden="true"><svg><use href="#flower"/></svg></div>
-        </header>
-        <div class="guide reveal"><img src="img/hl-4.png" alt="" /><p data-i18n="guide.rooms">هنا تسكن القطع. اضغطي على أيّ قطعة لتسمعي حكايتها.</p></div>
-
-        <div class="filters reveal" role="group" aria-label="Filter">
-          <button type="button" class="chip is-active" data-filter="all" aria-pressed="true" data-i18n="f.all">الكل</button>
-          <button type="button" class="chip" data-filter="season" aria-pressed="false" data-i18n="f.season">الموسم</button>
-          <button type="button" class="chip" data-filter="dresses" aria-pressed="false" data-i18n="f.dresses">الفساتين</button>
-          <button type="button" class="chip" data-filter="sets" aria-pressed="false" data-i18n="f.sets">الأطقم</button>
-          <button type="button" class="chip" data-filter="shirts" aria-pressed="false" data-i18n="f.shirts">القمصان</button>
-          <button type="button" class="chip" data-filter="jackets" aria-pressed="false" data-i18n="f.jackets">السترات</button>
-        </div>
-
-        <div class="products" id="products"></div>
+    <!-- HOW TO ORDER -->
+    <section class="order" id="order">
+      <div class="section-head">
+        <p class="eyebrow">Three steps</p>
+        <h2>How to order</h2>
       </div>
-    </section>
-
-    <!-- Handmade -->
-    <section class="section section-tint" id="handmade">
-      <div class="container handmade-grid">
-        <div class="handmade-media reveal">
-          <div class="arch stitch"><img src="img/kantha-top.jpg" alt="" data-i18n-alt="alt.kantha" /></div>
-          <img src="img/hl-3.png" alt="" class="handmade-badge" />
-        </div>
-        <div class="handmade-text reveal">
-          <p class="eyebrow" data-i18n="hm.eyebrow">حياكة يدوية</p>
-          <h2 class="section-title" data-i18n="hm.title">السحرُ هنا من كل البلاد، والحياكةُ يدوية.</h2>
-          <p class="section-lead" data-i18n="hm.lead">نستلهم من غرزِ الشعوب وأقمشتها — الكانثا، التطريز المتقاطع، طباعة القوالب — ونجمعها بين جدران دارنا في لبنان.</p>
-          <ol class="steps">
-            <li>
-              <span class="step-num">1</span>
-              <div><h3 data-i18n="hm.s1t">نختار الخيط</h3><p data-i18n="hm.s1">كتّانٌ وقطنٌ طبيعيّان، يتنفّسان معكِ.</p></div>
-            </li>
-            <li>
-              <span class="step-num">2</span>
-              <div><h3 data-i18n="hm.s2t">نرسم ونطرّز</h3><p data-i18n="hm.s2">كلُّ زهرةٍ تُرسم أولًا، ثم تُطرَّز بالإبرة.</p></div>
-            </li>
-            <li>
-              <span class="step-num">3</span>
-              <div><h3 data-i18n="hm.s3t">نحيك قطعتكِ</h3><p data-i18n="hm.s3">قطعٌ محدودة، تُخاط بتمهّلٍ وحب.</p></div>
-            </li>
-          </ol>
-          <div class="guide reveal"><img src="img/hl-4.png" alt="" /><p data-i18n="guide.handmade">هذه سلّتي؛ فيها الخيوط والإبر وكل الحكايات التي لم تُطرَّز بعد.</p></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Hills lookbook -->
-    <section class="section" id="hills">
-      <div class="container">
-        <header class="section-head reveal">
-          <p class="eyebrow" data-i18n="hills.eyebrow">على التلال</p>
-          <h2 class="section-title" data-i18n="hills.title">أنني فراشة.</h2>
-          <p class="section-lead" data-i18n="hills.lead">قطعُ رفا خارج الدار، بين الريح والزعتر وتلال لبنان.</p>
-        </header>
-        <div class="lookbook">
-          <figure class="look reveal"><div class="arch stitch"><img src="img/life-butterfly.jpg" alt="" data-i18n-alt="alt.butterfly" /></div></figure>
-          <blockquote class="look-quote reveal">
-            <svg aria-hidden="true"><use href="#sprig"/></svg>
-            <p data-i18n="hills.quote">«القطعة التي تُخاط باليد، تحمل شيئًا من اليد التي خاطتها.»</p>
-            <cite data-i18n="hills.cite">— رفيف</cite>
-          </blockquote>
-          <figure class="look reveal"><div class="arch stitch"><img src="img/life-sitting.jpg" alt="" data-i18n-alt="alt.sitting" /></div></figure>
-        </div>
-      </div>
-    </section>
-
-    <!-- Gentle talks -->
-    <section class="section section-tint" id="talks">
-      <div class="container">
-        <header class="section-head reveal">
-          <p class="eyebrow" data-i18n="talks.eyebrow">أحاديث لطيفة</p>
-          <h2 class="section-title" data-i18n="talks.title">حكاياتٌ من طاولة الخياطة.</h2>
-        </header>
-        <div class="guide reveal"><img src="img/hl-4.png" alt="" /><p data-i18n="guide.talks">تعالي نجلس قليلًا… عندي حكايات صغيرة أحبّ أن أرويها لكِ.</p></div>
-        <div class="talks">
-          <article class="talk reveal">
-            <img src="img/hl-1.png" alt="" class="talk-img round" />
-            <h3 data-i18n="t1.t">رفيف بين الزهور</h3>
-            <p data-i18n="t1.p">عن الأزهار البرّية التي تُلهم تطريزنا، وكيف تنتقل من الحقل إلى القماش.</p>
-            <a href="#" class="link" data-i18n="talks.more">اقرئي الحكاية</a>
-          </article>
-          <article class="talk reveal">
-            <img src="img/hl-2.png" alt="" class="talk-img round" />
-            <h3 data-i18n="t2.t">لماذا الكتّان؟</h3>
-            <p data-i18n="t2.p">قماشٌ يكبر معكِ، ويزداد لينًا مع كل غسلة.</p>
-            <a href="#" class="link" data-i18n="talks.more">اقرئي الحكاية</a>
-          </article>
-          <article class="talk reveal">
-            <img src="img/journal-writing.jpg" alt="" class="talk-img round" />
-            <h3 data-i18n="t3.t">كيف تعتنين بقطعتكِ</h3>
-            <p data-i18n="t3.p">نصائح بسيطة لتعيش قطعتكِ المطرّزة سنواتٍ طويلة.</p>
-            <a href="#" class="link" data-i18n="talks.more">اقرئي الحكاية</a>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Order -->
-    <section class="section" id="order">
-      <div class="container order-card reveal">
-        <svg class="order-sprig start" aria-hidden="true"><use href="#sprig"/></svg>
-        <svg class="order-sprig end" aria-hidden="true"><use href="#sprig"/></svg>
-        <p class="eyebrow" data-i18n="order.eyebrow">كيف تطلبين</p>
-        <h2 class="section-title" data-i18n="order.title">ثلاث خطوات، وفنجان قهوة.</h2>
-        <div class="guide reveal"><img src="img/hl-4.png" alt="" /><p data-i18n="guide.order">وصلنا إلى آخر الجولة! راسليني، وسأحضّر قطعتكِ بنفسي.</p></div>
-        <ol class="order-steps">
-          <li><span>1</span><p data-i18n="order.1">اختاري قطعتكِ من غرف الدار.</p></li>
-          <li><span>2</span><p data-i18n="order.2">راسلينا على واتساب أو إنستغرام مع مقاسكِ.</p></li>
-          <li><span>3</span><p data-i18n="order.3">نحيكها ونوصلها إليكِ، في لبنان وخارجه.</p></li>
-        </ol>
-        <div class="hero-cta center">
-          <a href="#" class="btn btn-primary js-wa" data-wa-general>
-            <svg class="icon"><use href="#wa"/></svg>
-            <span data-i18n="cta.whatsapp">اطلبي عبر واتساب</span>
-          </a>
-          <a href="https://www.instagram.com/rafa_atelier.lb" target="_blank" rel="noopener" class="btn btn-ghost">
-            <svg class="icon"><use href="#ig"/></svg>
-            <span>@rafa_atelier.lb</span>
-          </a>
-        </div>
-      </div>
+      <ol class="steps">
+        <li><span>I</span><h3>Pick your scents</h3><p>Add bottles to your bag. Can't find one? We stock 200+, just ask.</p></li>
+        <li><span>II</span><h3>Send on WhatsApp</h3><p>Your order is written for you. Add your area and you're done.</p></li>
+        <li><span>III</span><h3>Delivered</h3><p>To every region in Lebanon. Pay on delivery.</p></li>
+      </ol>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <a href="#top" class="brand">
-        <img src="img/logo.png" alt="" width="44" height="44" />
-        <span class="brand-name" data-i18n="brand">دار رفا</span>
-      </a>
-      <p class="footer-home" data-i18n="footer.home">بيتُنا في لبنان.</p>
-      <p class="footer-note" data-i18n="footer.note">© 2026 دار رفا — نسخة تجريبية</p>
-    </div>
+  <footer class="footer">
+    <img src="img/logo.png" alt="Dark Perfumes logo" width="72" height="72">
+    <p class="foot-name">Dark Perfumes</p>
+    <p><a id="footWa" href="#" target="_blank" rel="noopener">WhatsApp 76/620466</a> · <a href="https://www.tiktok.com/@dark_perfumes1" target="_blank" rel="noopener">TikTok @dark_perfumes1</a></p>
+    <p class="fine">Inspired fragrances. Brand names are used only to describe the scent profile and are the property of their owners.</p>
   </footer>
 
-  <dialog class="qv" id="quickview" aria-labelledby="qvName">
-    <div class="qv-inner">
-      <button type="button" class="qv-close" id="qvClose" aria-label="Close"><svg><use href="#close"/></svg></button>
-      <div class="qv-media">
-        <div class="arch stitch"><img id="qvImg" src="" alt="" /></div>
-        <div class="qv-nav">
-          <button type="button" id="qvPrev" aria-label="Previous"><svg><use href="#chev"/></svg></button>
-          <span id="qvCount" dir="ltr"></span>
-          <button type="button" id="qvNext" aria-label="Next"><svg><use href="#chev"/></svg></button>
-        </div>
-      </div>
-      <div class="qv-body">
-        <span class="product-tag" id="qvTag"></span>
-        <h2 id="qvName"></h2>
-        <p class="qv-story" id="qvStory"></p>
-        <dl class="qv-details">
-          <div><dt data-i18n="qv.fabric">القماش</dt><dd id="qvFabric"></dd></div>
-          <div><dt data-i18n="qv.work">العمل</dt><dd data-i18n="qv.workVal">تطريز وحياكة يدوية في الدار</dd></div>
-          <div><dt data-i18n="qv.size">المقاس</dt><dd data-i18n="qv.sizeVal">راسلينا لنعرف المقاسات المتوفرة</dd></div>
-        </dl>
-        <div class="qv-guide"><img src="img/hl-4.png" alt="" /><p data-i18n="qv.guide">قطعة واحدة لا تشبه غيرها؛ فكل غرزة فيها مختلفة قليلًا.</p></div>
-        <a class="btn btn-primary" id="qvWa" href="#" target="_blank" rel="noopener">
-          <svg class="icon"><use href="#wa"/></svg><span data-i18n="qv.cta">اطلبي هذه القطعة عبر واتساب</span>
-        </a>
-      </div>
+  <!-- BAG DRAWER -->
+  <div class="scrim" id="scrim" hidden></div>
+  <aside class="drawer" id="drawer" aria-label="Your bag" aria-hidden="true">
+    <div class="drawer-head">
+      <h2>Your bag</h2>
+      <button class="x" id="closeBag" aria-label="Close bag">×</button>
     </div>
-  </dialog>
+    <ul class="bag-list" id="bagList"></ul>
+    <div class="drawer-foot">
+      <div class="total"><span>Total</span><strong id="bagTotal">0$</strong></div>
+      <a class="btn btn-gold btn-block" id="checkout" href="#" target="_blank" rel="noopener">Order on WhatsApp</a>
+      <p class="fine">Delivery fee confirmed on WhatsApp.</p>
+    </div>
+  </aside>
 
-  <a href="#" class="wa-float js-wa" data-wa-general aria-label="WhatsApp">
-    <svg><use href="#wa"/></svg>
-  </a>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
   <script src="app.js"></script>
 </body>
