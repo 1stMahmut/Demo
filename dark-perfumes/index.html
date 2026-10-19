@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dark Perfumes</title>
+  <meta name="description" content="Dark Perfumes — 200+ fragrances from 6$, delivered to every region in Lebanon. Order on WhatsApp.">
+  <link rel="icon" href="img/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500&family=Tajawal:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="nav">
+    <a class="brand" href="#top" aria-label="Dark Perfumes home">
+      <img src="img/logo.png" alt="" width="40" height="40">
+      <span>Dark<em>Perfumes</em></span>
+    </a>
+    <nav class="nav-links" aria-label="Main">
+      <a href="#shop">Shop</a>
+      <a href="#signature">Signature</a>
+      <a href="#order">How to order</a>
+    </nav>
+    <button class="bag-btn" id="bagBtn" aria-label="Open bag">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 8h12l-1 12H7L6 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+      <span class="bag-count" id="bagCount">0</span>
+    </button>
+  </header>
+
+  <main id="top">
+    <!-- HERO: a single bottle in a pool of light -->
+    <section class="hero">
+      <div class="hero-light" aria-hidden="true"></div>
+      <div class="hero-copy">
+        <p class="eyebrow">Beirut · Est. on TikTok</p>
+        <h1>The scent<br><i>you're known for,</i><br>from 6$</h1>
+        <p class="lede">More than 200 fragrances, delivered to every region in Lebanon.</p>
+        <p class="lede ar" lang="ar" dir="rtl">التوصيل لجميع المناطق اللبنانية · لدينا أكثر من 200 صنف</p>
+        <div class="hero-cta">
+          <a class="btn btn-gold" href="#shop">Explore the collection</a>
+          <a class="btn btn-ghost" id="heroWa" href="#" target="_blank" rel="noopener">WhatsApp 76 620 466</a>
+        </div>
+      </div>
+      <figure class="hero-bottle">
+        <img id="heroImg" alt="Le Male Elixir bottle" referrerpolicy="no-referrer">
+        <figcaption>Le Male Elixir — <span>367K views</span></figcaption>
+      </figure>
+    </section>
+
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker-track" id="ticker"></div>
+    </div>
+
+    <!-- SHOP -->
+    <section class="shop" id="shop">
+      <div class="section-head">
+        <p class="eyebrow">The collection</p>
+        <h2>Chosen in the dark</h2>
+      </div>
+      <div class="filters" role="tablist" aria-label="Filter">
+        <button class="chip is-on" data-filter="all">All</button>
+        <button class="chip" data-filter="men">For him</button>
+        <button class="chip" data-filter="women">For her</button>
+        <button class="chip" data-filter="best">Most viewed</button>
+        <label class="search">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6"/><path d="m20 20-4.5-4.5"/></svg>
+          <input id="search" type="search" placeholder="Search a scent" aria-label="Search a scent">
+        </label>
+      </div>
+      <div class="grid" id="grid"></div>
+    </section>
+
+    <!-- SIGNATURE -->
+    <section class="signature" id="signature">
+      <div class="sig-img"><img id="sigImg" alt="Stronger With You Absolutely bottle" referrerpolicy="no-referrer"></div>
+      <div class="sig-copy">
+        <p class="eyebrow">Signature of the season</p>
+        <h2>Stronger With You<br><i>Absolutely</i></h2>
+        <p>Rum, glazed chestnut and warm vanilla. The bottle our followers ask about most after dark.</p>
+        <dl class="notes">
+          <div><dt>Top</dt><dd>Bergamot · Rum · Elemi</dd></div>
+          <div><dt>Heart</dt><dd>Lavender · Davana</dd></div>
+          <div><dt>Base</dt><dd>Chestnut · Cedar · Vanilla</dd></div>
+        </dl>
+        <button class="btn btn-gold" data-add="swy-absolutely">Add to bag — 7$</button>
+      </div>
+    </section>
+
+    <!-- HOW TO ORDER -->
+    <section class="order" id="order">
+      <div class="section-head">
+        <p class="eyebrow">Three steps</p>
+        <h2>How to order</h2>
+      </div>
+      <ol class="steps">
+        <li><span>I</span><h3>Pick your scents</h3><p>Add bottles to your bag. Can't find one? We stock 200+, just ask.</p></li>
+        <li><span>II</span><h3>Send on WhatsApp</h3><p>Your order is written for you. Add your area and you're done.</p></li>
+        <li><span>III</span><h3>Delivered</h3><p>To every region in Lebanon. Pay on delivery.</p></li>
+      </ol>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <img src="img/logo.png" alt="Dark Perfumes logo" width="72" height="72">
+    <p class="foot-name">Dark Perfumes</p>
+    <p><a id="footWa" href="#" target="_blank" rel="noopener">WhatsApp 76/620466</a> · <a href="https://www.tiktok.com/@dark_perfumes1" target="_blank" rel="noopener">TikTok @dark_perfumes1</a></p>
+    <p class="fine">Inspired fragrances. Brand names are used only to describe the scent profile and are the property of their owners.</p>
+  </footer>
+
+  <!-- BAG DRAWER -->
+  <div class="scrim" id="scrim" hidden></div>
+  <aside class="drawer" id="drawer" aria-label="Your bag" aria-hidden="true">
+    <div class="drawer-head">
+      <h2>Your bag</h2>
+      <button class="x" id="closeBag" aria-label="Close bag">×</button>
+    </div>
+    <ul class="bag-list" id="bagList"></ul>
+    <div class="drawer-foot">
+      <div class="total"><span>Total</span><strong id="bagTotal">0$</strong></div>
+      <a class="btn btn-gold btn-block" id="checkout" href="#" target="_blank" rel="noopener">Order on WhatsApp</a>
+      <p class="fine">Delivery fee confirmed on WhatsApp.</p>
+    </div>
+  </aside>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
