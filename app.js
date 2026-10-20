@@ -2,7 +2,7 @@
 
 // Orders go to WhatsApp when a number is set, otherwise to an Instagram DM.
 // Fill in the full number from the bio, digits only, e.g. "96171XXXXXX".
-const WHATSAPP_NUMBER = "";
+const WHATSAPP_NUMBER = "96171123456";
 const INSTAGRAM = "maisonrose.lb";
 
 // Placeholder photos from Unsplash. Swap any URL for the shop's own photo.

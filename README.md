@@ -16,6 +16,6 @@ Open `index.html` in a browser — no build step.
 GitHub Pages: repo Settings → Pages → Deploy from a branch → `main`, folder `/ (root)`. The site is then at https://1stmahmut.github.io/demo/
 
 ## Before showing it live
-- Set `WHATSAPP_NUMBER` at the top of `app.js` to the full number from the bio (it is cut off at "+961 71…"). Until then, order buttons open an Instagram DM.
+- WhatsApp orders go to +961 71 123 456 (`WHATSAPP_NUMBER` in `app.js`); confirm it is the shop's number.
 - Swap the Unsplash photos in `PHOTOS` and `ITEMS` (`app.js`) for the shop's own work.
 - Add the date of the next workshop.
