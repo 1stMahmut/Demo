@@ -1,13 +1,13 @@
-# Dark Perfumes — demo website
+# Maison Rose — demo website
 
-Static demo for [@dark_perfumes1](https://www.tiktok.com/@dark_perfumes1) on TikTok, a Lebanese perfume shop.
+Static demo for [@maisonrose.lb](https://www.instagram.com/maisonrose.lb/) on Instagram, a flower boutique in Adma, Lebanon.
 
-**Design direction:** Tenebrism (a near-black page where each bottle stands in its own pool of light) with luxury serif type and thin Art Deco gold lines.
+**Design direction:** Luxury Typography and Filigree taken from the logo (black, gold, widely spaced capitals, the curled gold rule) softened with Ethereal blush sections. Arched and round photo frames echo the round logo.
 
-- Clean bottle photos loaded from Fragrantica's image CDN (`fimgs.net`), with a line-drawn bottle shown if one fails to load
-- Filter by him / her / most viewed, plus search; a "200+ more" card sends people to WhatsApp
-- Bag with quantities; checkout opens WhatsApp (76/620466) with the order already written out
-- Delivery line in Arabic from the bio; works on phones
+- Photos only, no video: clean placeholder images from Unsplash. If a photo fails to load, a blush panel with the gold logo is shown instead
+- Collections filter that mirrors the Instagram highlights (Pink, Red, Fresh, Boxes); tap a piece to see it large and order it
+- Sections for weddings and events, workshops, and visiting or ordering
+- Every "Order" button opens a ready-written message; works on phones
 
 ## Run
 Open `index.html` in a browser — no build step.
@@ -16,4 +16,6 @@ Open `index.html` in a browser — no build step.
 GitHub Pages: repo Settings → Pages → Deploy from a branch → `main`, folder `/ (root)`. The site is then at https://1stmahmut.github.io/demo/
 
 ## Before showing it live
-Confirm prices (6$/7$ come from the TikTok videos; others are guesses) and swap in the shop's own photos if wanted.
+- Set `WHATSAPP_NUMBER` at the top of `app.js` to the full number from the bio (it is cut off at "+961 71…"). Until then, order buttons open an Instagram DM.
+- Swap the Unsplash photos in `PHOTOS` and `ITEMS` (`app.js`) for the shop's own work.
+- Add the date of the next workshop.

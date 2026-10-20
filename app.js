@@ -1,145 +1,103 @@
-// Dark Perfumes demo — catalogue, filters, bag and WhatsApp checkout
-const WHATSAPP_NUMBER = "96176620466"; // 76/620466 from the TikTok bio
+/* Maison Rose — demo site */
 
-// Clean bottle shots from Fragrantica's image CDN (id = Fragrantica perfume id)
-const img = id => `https://fimgs.net/mdimg/perfume/375x500.${id}.jpg`;
+// Orders go to WhatsApp when a number is set, otherwise to an Instagram DM.
+// Fill in the full number from the bio, digits only, e.g. "96171XXXXXX".
+const WHATSAPP_NUMBER = "";
+const INSTAGRAM = "maisonrose.lb";
 
-const PRODUCTS = [
-  { id: "le-male-elixir", house: "Jean Paul Gaultier", name: "Le Male Elixir", for: "men", price: 7, views: "367.3K", tag: "Best seller", hot: true, fid: 81642, notes: "Lavender · Honey · Tonka" },
-  { id: "swy-absolutely", house: "Emporio Armani", name: "Stronger With You Absolutely", for: "men", price: 7, views: "151.8K", tag: "Trending", hot: true, fid: 64501, notes: "Rum · Chestnut · Vanilla" },
-  { id: "imagination", house: "Louis Vuitton", name: "Imagination", for: "men", price: 6, views: "33.6K", fid: 67370, notes: "Citron · Black tea · Ambroxan" },
-  { id: "jadore", house: "Dior", name: "J'adore", for: "women", price: 6, views: "26.7K", tag: "Only 6$", fid: 210, notes: "Pear · Jasmine · Rose" },
-  { id: "born-in-roma", house: "Valentino", name: "Born in Roma Intense", for: "men", price: 7, views: "5.4K", fid: 78740, notes: "Vanilla · Lavender · Vetiver" },
-  { id: "eros-flame", house: "Versace", name: "Eros Flame", for: "men", price: 7, views: "2.6K", fid: 52180, notes: "Mandarin · Pepper · Vanilla" },
-  { id: "eros", house: "Versace", name: "Eros", for: "men", price: 7, views: "2.6K", fid: 16657, notes: "Mint · Green apple · Tonka" },
-  { id: "sauvage-elixir", house: "Dior", name: "Sauvage Elixir", for: "men", price: 7, views: "2.5K", fid: 68415, notes: "Spices · Lavender · Licorice" },
-  { id: "yara", house: "Lattafa", name: "Yara", for: "women", price: 6, views: "1.8K", tag: "New", fid: 76880, notes: "Orchid · Tropical fruit · Vanilla" }
+// Placeholder photos from Unsplash. Swap any URL for the shop's own photo.
+const U = id => `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=900&q=75`;
+const PHOTOS = {
+  hero: U("1561181286-d3fee7d55364"),
+  heroSmall: U("1518895949257-7621c3c786d7"),
+  table: U("1464366400600-7168b8af9bc3"),
+  bride: U("1519741497674-611481863552"),
+  arch: U("1478146896981-b80fe463b330"),
+  workshop: U("1487530811176-3780de880c2d")
+};
+
+const ITEMS = [
+  { id: "blush-box", name: "Blush Rose Box", tag: "pink", also: "boxes", photo: "1561181286-d3fee7d55364", text: "Soft pink roses in our signature round box." },
+  { id: "peony", name: "Peony Cloud", tag: "pink", photo: "1455659817273-f96807779a8a", text: "Full pink peonies, wrapped loose and romantic." },
+  { id: "red-100", name: "The Grand Red", tag: "red", photo: "1518895949257-7621c3c786d7", text: "A statement bouquet of deep red roses." },
+  { id: "tulips", name: "Spring Tulips", tag: "fresh", photo: "1490750967868-88aa4486c946", text: "Mixed tulips, cut fresh this morning." },
+  { id: "garden", name: "Garden Mix", tag: "fresh", photo: "1487530811176-3780de880c2d", text: "Seasonal blooms in soft, garden colours." },
+  { id: "red-box", name: "Red Rose Box", tag: "red", also: "boxes", photo: "1494972308805-463bc619d34e", text: "Red roses packed close in a black box." },
+  { id: "pastel", name: "Pastel Wrap", tag: "pink", photo: "1508610048659-a06b669e3321", text: "Roses, lisianthus and greenery in pastel paper." },
+  { id: "white", name: "White Elegance", tag: "fresh", also: "boxes", photo: "1525310072745-f49212b5ac6d", text: "Ivory blooms for weddings, christenings and thank-yous." }
 ];
-const BEST = ["le-male-elixir", "swy-absolutely", "imagination", "jadore"];
+const LABEL = { pink: "Pink collection", red: "Red collection", fresh: "Fresh flowers", boxes: "Boxes" };
 
 const $ = s => document.querySelector(s);
-const byId = id => PRODUCTS.find(p => p.id === id);
-const wa = text => `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`;
+const orderLink = text => WHATSAPP_NUMBER
+  ? `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`
+  : `https://ig.me/m/${INSTAGRAM}`;
 
-// Elegant line-drawn bottle shown if a remote photo fails to load
-const FALLBACK = `<div class="fallback"><svg viewBox="0 0 100 140" fill="none" stroke="#b8925a" stroke-width="1.4">
-  <rect x="40" y="6" width="20" height="16"/><rect x="44" y="22" width="12" height="10"/>
-  <rect x="18" y="32" width="64" height="100" rx="6"/><path d="M30 60h40M30 104h40"/>
-  <text x="50" y="87" text-anchor="middle" font-family="Georgia" font-size="11" fill="#b8925a" stroke="none">DP</text></svg></div>`;
-
-function photo(p, alt = "") {
-  return `<img src="${img(p.fid)}" alt="${alt}" loading="lazy" referrerpolicy="no-referrer"
-    onerror="this.replaceWith(document.createRange().createContextualFragment(FALLBACK))">`;
+// Soft blush panel with the gold flourish, shown if a remote photo fails to load
+function fallback(img) {
+  const ph = document.createElement("div");
+  ph.className = "ph";
+  ph.innerHTML = `<span>Maison</span><svg aria-hidden="true"><use href="#flourish"/></svg><span>Rose</span>`;
+  img.replaceWith(ph);
+}
+function photo(src, alt) {
+  const img = new Image();
+  img.alt = alt;
+  img.loading = "lazy";
+  img.onerror = () => fallback(img);
+  img.src = src;
+  return img;
 }
 
-/* ---------- catalogue ---------- */
-let filter = "all", query = "";
-
+/* ---------- collections ---------- */
+let filter = "all";
 function render() {
-  const q = query.trim().toLowerCase();
-  const list = PRODUCTS.filter(p =>
-    (filter === "all" || (filter === "best" ? BEST.includes(p.id) : p.for === filter)) &&
-    (!q || `${p.name} ${p.house} ${p.notes}`.toLowerCase().includes(q))
-  );
-  const cards = list.map((p, i) => `
-    <article class="card" style="animation-delay:${i * 60}ms">
-      ${p.tag ? `<span class="tag${p.hot ? " hot" : ""}">${p.hot ? "🔥 " : ""}${p.tag}</span>` : ""}
-      <div class="plate">${photo(p, `${p.name} bottle`)}</div>
-      <div class="card-body">
-        <span class="house">Inspired by ${p.house}</span>
-        <h3>${p.name}</h3>
-        <span class="notes-line">${p.notes}</span>
-        <div class="card-foot">
-          <span class="price">${p.price}$<small>${p.views} views</small></span>
-          <button class="add" data-add="${p.id}">Add</button>
-        </div>
-      </div>
-    </article>`).join("");
-  const more = `
-    <article class="card more">
-      <span class="big">200+</span>
-      <p>more scents in stock.<br>Tell us the one you love.</p>
-      <a class="btn btn-ghost" href="${wa("Hi Dark Perfumes! Do you have ")}" target="_blank" rel="noopener">Ask on WhatsApp</a>
-    </article>`;
-  $("#grid").innerHTML = list.length ? cards + (q ? "" : more)
-    : `<p class="empty">Not listed here — we have 200+ more. <a href="${wa(`Hi! Do you have ${query}?`)}" target="_blank" rel="noopener">Ask us on WhatsApp</a>.</p>`;
+  const grid = $("#grid");
+  grid.innerHTML = "";
+  ITEMS.filter(p => filter === "all" || p.tag === filter || p.also === filter).forEach((p, i) => {
+    const card = document.createElement("button");
+    card.className = "card";
+    card.style.animationDelay = `${i * 70}ms`;
+    card.dataset.id = p.id;
+    card.innerHTML = `<div class="frame"></div><span class="card-tag">${LABEL[p.tag]}</span><h3>${p.name}</h3>`;
+    card.querySelector(".frame").append(photo(U(p.photo), p.name));
+    grid.append(card);
+  });
 }
-
 document.querySelectorAll(".chip").forEach(c => c.addEventListener("click", () => {
   document.querySelectorAll(".chip").forEach(x => x.classList.toggle("is-on", x === c));
   filter = c.dataset.filter;
   render();
 }));
-$("#search").addEventListener("input", e => { query = e.target.value; render(); });
 
-/* ---------- bag ---------- */
-let bag = {};
-try { bag = JSON.parse(localStorage.getItem("dp-bag")) || {}; } catch (_) {}
-const save = () => { try { localStorage.setItem("dp-bag", JSON.stringify(bag)); } catch (_) {} };
-
-function renderBag() {
-  const ids = Object.keys(bag).filter(byId);
-  const count = ids.reduce((n, id) => n + bag[id], 0);
-  const total = ids.reduce((n, id) => n + bag[id] * byId(id).price, 0);
-  $("#bagCount").textContent = count;
-  $("#bagCount").classList.toggle("has", count > 0);
-  $("#bagTotal").textContent = `${total}$`;
-  $("#bagList").innerHTML = ids.length ? ids.map(id => {
-    const p = byId(id);
-    return `<li>
-      <div class="thumb">${photo(p)}</div>
-      <div><span class="house">${p.house}</span><h4>${p.name}</h4>
-        <div class="qty"><button data-dec="${id}" aria-label="Less">−</button>${bag[id]}<button data-inc="${id}" aria-label="More">+</button></div></div>
-      <span class="line-price">${bag[id] * p.price}$</span>
-    </li>`;
-  }).join("") : `<li class="bag-empty">Your bag is waiting for a scent.</li>`;
-
-  const lines = ids.map(id => `• ${bag[id]} × ${byId(id).name} (${byId(id).house}) — ${bag[id] * byId(id).price}$`);
-  const checkout = $("#checkout");
-  checkout.href = wa(`Hi Dark Perfumes! I'd like to order:\n${lines.join("\n")}\nTotal: ${total}$\n\nName:\nArea:`);
-  checkout.classList.toggle("disabled", !ids.length);
+/* ---------- lightbox ---------- */
+function openBox(p) {
+  $("#lbImg").replaceChildren(photo(U(p.photo), p.name));
+  $("#lbTag").textContent = LABEL[p.tag];
+  $("#lbName").textContent = p.name;
+  $("#lbText").textContent = p.text;
+  $("#lbOrder").href = orderLink(`Hello Maison Rose! I'd like to order the "${p.name}". Date: … Delivery area: …`);
+  $("#lightbox").hidden = false;
+  document.body.style.overflow = "hidden";
+  $("#closeBox").focus();
 }
-
-function add(id) {
-  bag[id] = (bag[id] || 0) + 1;
-  save(); renderBag();
-  $("#bagBtn").classList.remove("bump"); void $("#bagBtn").offsetWidth; $("#bagBtn").classList.add("bump");
-  toast(`${byId(id).name} added to your bag`);
+function closeBox() {
+  $("#lightbox").hidden = true;
+  document.body.style.overflow = "";
 }
-
-document.addEventListener("click", e => {
-  const t = e.target.closest("[data-add],[data-inc],[data-dec]");
-  if (!t) return;
-  if (t.dataset.add) add(t.dataset.add);
-  if (t.dataset.inc) { bag[t.dataset.inc]++; save(); renderBag(); }
-  if (t.dataset.dec) { if (--bag[t.dataset.dec] <= 0) delete bag[t.dataset.dec]; save(); renderBag(); }
+$("#grid").addEventListener("click", e => {
+  const card = e.target.closest(".card");
+  if (card) openBox(ITEMS.find(p => p.id === card.dataset.id));
 });
-
-function openBag(open) {
-  $("#drawer").classList.toggle("open", open);
-  $("#drawer").setAttribute("aria-hidden", !open);
-  $("#scrim").hidden = !open;
-}
-$("#bagBtn").addEventListener("click", () => openBag(true));
-$("#closeBag").addEventListener("click", () => openBag(false));
-$("#scrim").addEventListener("click", () => openBag(false));
-document.addEventListener("keydown", e => e.key === "Escape" && openBag(false));
-
-let toastTimer;
-function toast(msg) {
-  $("#toast").textContent = msg;
-  $("#toast").classList.add("show");
-  clearTimeout(toastTimer);
-  toastTimer = setTimeout(() => $("#toast").classList.remove("show"), 2200);
-}
+$("#closeBox").addEventListener("click", closeBox);
+$("#lightbox").addEventListener("click", e => e.target.id === "lightbox" && closeBox());
+document.addEventListener("keydown", e => e.key === "Escape" && closeBox());
 
 /* ---------- static bits ---------- */
-$("#heroImg").src = img(81642);
-$("#sigImg").src = img(64501);
-[$("#heroImg"), $("#sigImg")].forEach(el => el.onerror = () => el.replaceWith(document.createRange().createContextualFragment(FALLBACK)));
-$("#heroWa").href = $("#footWa").href = wa("Hi Dark Perfumes! I saw your website.");
-const words = PRODUCTS.map(p => p.name).concat(["Delivery all over Lebanon", "200+ scents", "From 6$"]);
-$("#ticker").innerHTML = words.concat(words).map(w => `<span>${w}</span>`).join("");
+document.querySelectorAll("img[data-src]").forEach(el => {
+  el.onerror = () => fallback(el);
+  el.src = PHOTOS[el.dataset.src];
+});
+document.querySelectorAll("[data-order]").forEach(a => a.href = orderLink(a.dataset.order));
 
 render();
-renderBag();

@@ -3,128 +3,155 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Dark Perfumes</title>
-  <meta name="description" content="Dark Perfumes — 200+ fragrances from 6$, delivered to every region in Lebanon. Order on WhatsApp.">
-  <link rel="icon" href="img/logo.png">
+  <title>Maison Rose</title>
+  <meta name="description" content="Maison Rose — flower boutique in Adma, Lebanon. Weddings, events, daily flowers and workshops. Delivery available.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32'/%3E%3Ctext x='32' y='41' text-anchor='middle' font-family='Georgia' font-size='24' fill='%23c9a16a'%3EMR%3C/text%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500&family=Tajawal:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
+  <!-- Reusable gold flourish from the Maison Rose logo -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="flourish" viewBox="0 0 400 24">
+      <path d="M22 12h356" stroke="currentColor" stroke-width="1.2"/>
+      <path d="M22 12c-8 0-12-5-9-9s10-1 8 4-7 4-8 1M22 12c-8 0-12 5-9 9s10 1 8-4-7-4-8-1" fill="none" stroke="currentColor" stroke-width="1.2"/>
+      <path d="M378 12c8 0 12-5 9-9s-10-1-8 4 7 4 8 1M378 12c8 0 12 5 9 9s-10 1-8-4 7-4 8-1" fill="none" stroke="currentColor" stroke-width="1.2"/>
+    </symbol>
+  </svg>
+
   <header class="nav">
-    <a class="brand" href="#top" aria-label="Dark Perfumes home">
-      <img src="img/logo.png" alt="" width="40" height="40">
-      <span>Dark<em>Perfumes</em></span>
+    <a class="brand" href="#top" aria-label="Maison Rose home">
+      <span class="brand-top">Maison</span>
+      <svg class="brand-line"><use href="#flourish"/></svg>
+      <span class="brand-bot">Rose</span>
     </a>
     <nav class="nav-links" aria-label="Main">
-      <a href="#shop">Shop</a>
-      <a href="#signature">Signature</a>
-      <a href="#order">How to order</a>
+      <a href="#collections">Collections</a>
+      <a href="#weddings">Weddings &amp; events</a>
+      <a href="#workshops">Workshops</a>
+      <a href="#visit">Visit</a>
     </nav>
-    <button class="bag-btn" id="bagBtn" aria-label="Open bag">
-      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 8h12l-1 12H7L6 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
-      <span class="bag-count" id="bagCount">0</span>
-    </button>
+    <a class="btn btn-gold nav-cta" data-order="Hello Maison Rose! I'd like to order flowers." href="#" target="_blank" rel="noopener">Order</a>
   </header>
 
   <main id="top">
-    <!-- HERO: a single bottle in a pool of light -->
+    <!-- HERO: the logo, set as luxury type on black -->
     <section class="hero">
-      <div class="hero-light" aria-hidden="true"></div>
       <div class="hero-copy">
-        <p class="eyebrow">Beirut · Est. on TikTok</p>
-        <h1>The scent<br><i>you're known for,</i><br>from 6$</h1>
-        <p class="lede">More than 200 fragrances, delivered to every region in Lebanon.</p>
-        <p class="lede ar" lang="ar" dir="rtl">التوصيل لجميع المناطق اللبنانية · لدينا أكثر من 200 صنف</p>
+        <p class="eyebrow">Flower boutique · Adma, Lebanon</p>
+        <h1 class="mark">
+          <span>Maison</span>
+          <svg class="mark-line" aria-hidden="true"><use href="#flourish"/></svg>
+          <span>Rose</span>
+        </h1>
+        <p class="lede">Weddings, events and daily flowers, arranged by hand and delivered to your door.</p>
         <div class="hero-cta">
-          <a class="btn btn-gold" href="#shop">Explore the collection</a>
-          <a class="btn btn-ghost" id="heroWa" href="#" target="_blank" rel="noopener">WhatsApp 76 620 466</a>
+          <a class="btn btn-gold" href="#collections">See the collections</a>
+          <a class="btn btn-ghost" data-order="Hello Maison Rose! I'd like to order a bouquet." href="#" target="_blank" rel="noopener">Order a bouquet</a>
         </div>
       </div>
-      <figure class="hero-bottle">
-        <img id="heroImg" alt="Le Male Elixir bottle" referrerpolicy="no-referrer">
-        <figcaption>Le Male Elixir — <span>367K views</span></figcaption>
-      </figure>
+      <div class="hero-art">
+        <figure class="arch"><img data-src="hero" alt="Box of soft pink roses"></figure>
+        <figure class="round"><img data-src="heroSmall" alt="Red roses close up"></figure>
+      </div>
     </section>
 
-    <div class="ticker" aria-hidden="true">
-      <div class="ticker-track" id="ticker"></div>
-    </div>
+    <ul class="pillars" aria-label="What we do">
+      <li>Weddings</li><li>Events</li><li>Daily flowers</li><li>Workshops</li><li>Delivery</li>
+    </ul>
 
-    <!-- SHOP -->
-    <section class="shop" id="shop">
+    <!-- COLLECTIONS: mirrors the Instagram highlights -->
+    <section class="collections" id="collections">
       <div class="section-head">
-        <p class="eyebrow">The collection</p>
-        <h2>Chosen in the dark</h2>
+        <p class="eyebrow">The collections</p>
+        <h2>Flowers for <i>every</i> occasion</h2>
+        <svg class="rule" aria-hidden="true"><use href="#flourish"/></svg>
       </div>
       <div class="filters" role="tablist" aria-label="Filter">
-        <button class="chip is-on" data-filter="all">All</button>
-        <button class="chip" data-filter="men">For him</button>
-        <button class="chip" data-filter="women">For her</button>
-        <button class="chip" data-filter="best">Most viewed</button>
-        <label class="search">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6"/><path d="m20 20-4.5-4.5"/></svg>
-          <input id="search" type="search" placeholder="Search a scent" aria-label="Search a scent">
-        </label>
+        <button class="chip is-on" data-filter="all" role="tab">All</button>
+        <button class="chip" data-filter="pink" role="tab">Pink</button>
+        <button class="chip" data-filter="red" role="tab">Red</button>
+        <button class="chip" data-filter="fresh" role="tab">Fresh</button>
+        <button class="chip" data-filter="boxes" role="tab">Boxes</button>
       </div>
       <div class="grid" id="grid"></div>
     </section>
 
-    <!-- SIGNATURE -->
-    <section class="signature" id="signature">
-      <div class="sig-img"><img id="sigImg" alt="Stronger With You Absolutely bottle" referrerpolicy="no-referrer"></div>
-      <div class="sig-copy">
-        <p class="eyebrow">Signature of the season</p>
-        <h2>Stronger With You<br><i>Absolutely</i></h2>
-        <p>Rum, glazed chestnut and warm vanilla. The bottle our followers ask about most after dark.</p>
-        <dl class="notes">
-          <div><dt>Top</dt><dd>Bergamot · Rum · Elemi</dd></div>
-          <div><dt>Heart</dt><dd>Lavender · Davana</dd></div>
-          <div><dt>Base</dt><dd>Chestnut · Cedar · Vanilla</dd></div>
-        </dl>
-        <button class="btn btn-gold" data-add="swy-absolutely">Add to bag — 7$</button>
+    <!-- WEDDINGS & EVENTS -->
+    <section class="events" id="weddings">
+      <div class="events-copy">
+        <p class="eyebrow">Weddings &amp; events</p>
+        <h2>We set the scene<br><i>for forever</i></h2>
+        <p>Ceremony aisles, candlelit tables, communions, christenings and proms. Tell us the date and the feeling, and we design the flowers around it.</p>
+        <ul class="ticks">
+          <li>Venue styling and table centrepieces</li>
+          <li>Bridal bouquets and flower girls</li>
+          <li>Flower walls, arches and candle installations</li>
+        </ul>
+        <a class="btn btn-gold" data-order="Hello Maison Rose! I'm planning an event and would love a quote. Date: … Venue: … Guests: …" href="#" target="_blank" rel="noopener">Plan my event</a>
+      </div>
+      <div class="events-mosaic">
+        <figure class="m1"><img data-src="table" alt="Long candlelit table dressed with flowers"></figure>
+        <figure class="m2"><img data-src="bride" alt="Bride holding a white bouquet"></figure>
+        <figure class="m3"><img data-src="arch" alt="Flower arch at an outdoor ceremony"></figure>
       </div>
     </section>
 
-    <!-- HOW TO ORDER -->
-    <section class="order" id="order">
+    <!-- WORKSHOPS -->
+    <section class="workshop" id="workshops">
+      <figure class="ws-img"><img data-src="workshop" alt="Hands arranging a bouquet at a workshop"></figure>
+      <div class="ws-copy">
+        <p class="eyebrow">Workshops</p>
+        <h2>Bloom <i>together</i></h2>
+        <p>Spend an afternoon arranging with us, then take your bouquet home. Our last session, for Pink October, was held on 17 October 2026 with Latte Art.</p>
+        <p class="ws-next">Join the list to hear about the next date first.</p>
+        <a class="btn btn-ghost" data-order="Hello Maison Rose! Please add me to the list for your next flower workshop." href="#" target="_blank" rel="noopener">Join the next workshop</a>
+      </div>
+    </section>
+
+    <!-- VISIT -->
+    <section class="visit" id="visit">
       <div class="section-head">
-        <p class="eyebrow">Three steps</p>
-        <h2>How to order</h2>
+        <p class="eyebrow">Visit or order</p>
+        <h2>From our boutique <i>to your door</i></h2>
+        <svg class="rule" aria-hidden="true"><use href="#flourish"/></svg>
       </div>
       <ol class="steps">
-        <li><span>I</span><h3>Pick your scents</h3><p>Add bottles to your bag. Can't find one? We stock 200+, just ask.</p></li>
-        <li><span>II</span><h3>Send on WhatsApp</h3><p>Your order is written for you. Add your area and you're done.</p></li>
-        <li><span>III</span><h3>Delivered</h3><p>To every region in Lebanon. Pay on delivery.</p></li>
+        <li><span>I</span><h3>Choose</h3><p>Pick a piece from the collections, or describe what you have in mind.</p></li>
+        <li><span>II</span><h3>Message us</h3><p>Your request is written for you. Add the date and delivery address.</p></li>
+        <li><span>III</span><h3>Delivered</h3><p>Hand-delivered fresh, or collect it from our boutique in Adma.</p></li>
       </ol>
+      <div class="visit-card">
+        <div>
+          <h3>Maison Rose</h3>
+          <p>Adma, Mont-Liban, Lebanon</p>
+        </div>
+        <a class="btn btn-ghost" href="https://www.google.com/maps/search/?api=1&amp;query=Maison+Rose+Adma+Lebanon" target="_blank" rel="noopener">Get directions</a>
+      </div>
     </section>
   </main>
 
   <footer class="footer">
-    <img src="img/logo.png" alt="Dark Perfumes logo" width="72" height="72">
-    <p class="foot-name">Dark Perfumes</p>
-    <p><a id="footWa" href="#" target="_blank" rel="noopener">WhatsApp 76/620466</a> · <a href="https://www.tiktok.com/@dark_perfumes1" target="_blank" rel="noopener">TikTok @dark_perfumes1</a></p>
-    <p class="fine">Inspired fragrances. Brand names are used only to describe the scent profile and are the property of their owners.</p>
+    <div class="foot-mark"><span>Maison</span><svg class="mark-line" aria-hidden="true"><use href="#flourish"/></svg><span>Rose</span></div>
+    <p>Flower boutique · Weddings · Events · Daily flowers</p>
+    <p><a href="https://www.instagram.com/maisonrose.lb/" target="_blank" rel="noopener">Instagram @maisonrose.lb</a> · <a data-order="Hello Maison Rose!" href="#" target="_blank" rel="noopener">Message us</a></p>
+    <p class="fine">Demo website. Photos are placeholders from Unsplash until replaced with Maison Rose's own work.</p>
   </footer>
 
-  <!-- BAG DRAWER -->
-  <div class="scrim" id="scrim" hidden></div>
-  <aside class="drawer" id="drawer" aria-label="Your bag" aria-hidden="true">
-    <div class="drawer-head">
-      <h2>Your bag</h2>
-      <button class="x" id="closeBag" aria-label="Close bag">×</button>
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Arrangement" hidden>
+    <button class="x" id="closeBox" aria-label="Close">×</button>
+    <figure class="lb-img" id="lbImg"></figure>
+    <div class="lb-copy">
+      <p class="eyebrow" id="lbTag"></p>
+      <h3 id="lbName"></h3>
+      <p id="lbText"></p>
+      <a class="btn btn-gold" id="lbOrder" href="#" target="_blank" rel="noopener">Order this</a>
     </div>
-    <ul class="bag-list" id="bagList"></ul>
-    <div class="drawer-foot">
-      <div class="total"><span>Total</span><strong id="bagTotal">0$</strong></div>
-      <a class="btn btn-gold btn-block" id="checkout" href="#" target="_blank" rel="noopener">Order on WhatsApp</a>
-      <p class="fine">Delivery fee confirmed on WhatsApp.</p>
-    </div>
-  </aside>
-
-  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  </div>
 
   <script src="app.js"></script>
 </body>
