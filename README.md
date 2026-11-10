@@ -1,21 +1,21 @@
-# Maison Rose — demo website
+# Verona Clothes — demo website
 
-Static demo for [@maisonrose.lb](https://www.instagram.com/maisonrose.lb/) on Instagram, a flower boutique in Adma, Lebanon.
+Static demo for [@veronaclothesshop](https://www.instagram.com/veronaclothesshop/), a women's fashion shop in Beirut with three branches.
 
-**Design direction:** Luxury Typography and Filigree taken from the logo (black, gold, widely spaced capitals, the curled gold rule) softened with Ethereal blush sections. Arched and round photo frames echo the round logo.
+**Design direction: Art Deco**, softened to match the stores themselves: gold arched frames (like the store mirrors and rails), a glowing peach circle (the lit VERONA sign), sunburst fan motifs, blush walls and black-and-ivory. The logo is rebuilt in CSS with the three-bar "E".
 
-- Photos only, no video: clean placeholder images from Unsplash. If a photo fails to load, a blush panel with the gold logo is shown instead
-- Collections filter that mirrors the Instagram highlights (Pink, Red, Fresh, Boxes); tap a piece to see it large and order it
-- Sections for weddings and events, workshops, and visiting or ordering
-- Every "Order" button opens a ready-written message; works on phones
+- English / Arabic toggle (full RTL layout, El Messiri font for Arabic)
+- "New this season" with filters (New in, Jackets & coats, Knitwear, Sets & gilets, Denim); tap a piece → choose size and delivery or branch pickup → ready-written WhatsApp message
+- Look of the week (from the "Full outfit available at Verona" posts)
+- Three branches: Beirut Sabil St, Hamra Leon St, Tarik Jdideh, each with "Reserve my size" and Google Maps directions
+- Delivery $4, exchange within 3 days (no refunds), Instagram strip
+- Photos in `img/` are cropped from the shop's own Instagram posts
 
 ## Run
-Open `index.html` in a browser — no build step.
-
-## Share a live link
-GitHub Pages: repo Settings → Pages → Deploy from a branch → `main`, folder `/ (root)`. The site is then at https://1stmahmut.github.io/demo/
+Open `index.html` in a browser. There's no build step.
 
 ## Before showing it live
-- WhatsApp orders go to +961 71 123 456 (`WHATSAPP_NUMBER` in `app.js`); confirm it is the shop's number.
-- Swap the Unsplash photos in `PHOTOS` and `ITEMS` (`app.js`) for the shop's own work.
-- Add the date of the next workshop.
+- WhatsApp goes to +961 79 076 606 (`WHATSAPP_NUMBER` in `app.js`), the Tarik Jdideh number in the bio; confirm it.
+- Product names, sizes (S–XXL) and descriptions are placeholders; there are no prices on purpose.
+- Map links are searches; replace them with each branch's exact Google Maps pin.
+- The previous demo (Maison Rose) is kept on the `archive/maison-rose` branch.

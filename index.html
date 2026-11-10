@@ -1,157 +1,171 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Maison Rose</title>
-  <meta name="description" content="Maison Rose — flower boutique in Adma, Lebanon. Weddings, events, daily flowers and workshops. Delivery available.">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32'/%3E%3Ctext x='32' y='41' text-anchor='middle' font-family='Georgia' font-size='24' fill='%23c9a16a'%3EMR%3C/text%3E%3C/svg%3E">
+  <title>Verona Clothes</title>
+  <meta name="description" content="Verona Clothes — women's fashion in Beirut. Three branches: Sabil Street, Hamra Leon Street and Tarik Jdideh. Delivery to all Lebanon for $4.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%23141210'/%3E%3Cpath d='M18 20l9 24 9-24' fill='none' stroke='%23d7b77a' stroke-width='4'/%3E%3Cpath d='M39 22h9M39 32h9M39 42h9' stroke='%23d7b77a' stroke-width='4'/%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poiret+One&family=Josefin+Sans:wght@300;400;600&family=El+Messiri:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <!-- Reusable gold flourish from the Maison Rose logo -->
+  <!-- Art Deco sunburst, reused behind headings and in the hero -->
   <svg width="0" height="0" style="position:absolute" aria-hidden="true">
-    <symbol id="flourish" viewBox="0 0 400 24">
-      <path d="M22 12h356" stroke="currentColor" stroke-width="1.2"/>
-      <path d="M22 12c-8 0-12-5-9-9s10-1 8 4-7 4-8 1M22 12c-8 0-12 5-9 9s10 1 8-4-7-4-8-1" fill="none" stroke="currentColor" stroke-width="1.2"/>
-      <path d="M378 12c8 0 12-5 9-9s-10-1-8 4 7 4 8 1M378 12c8 0 12 5 9 9s-10 1-8-4 7-4 8-1" fill="none" stroke="currentColor" stroke-width="1.2"/>
+    <symbol id="fan" viewBox="0 0 120 60">
+      <g fill="none" stroke="currentColor" stroke-width="1">
+        <path d="M10 60a50 50 0 0 1 100 0"/>
+        <path d="M24 60a36 36 0 0 1 72 0"/>
+        <path d="M38 60a22 22 0 0 1 44 0"/>
+        <path d="M60 60V10M60 60L25 25M60 60l35-35M60 60L12 42M60 60l48-18"/>
+      </g>
     </symbol>
   </svg>
 
   <header class="nav">
-    <a class="brand" href="#top" aria-label="Maison Rose home">
-      <span class="brand-top">Maison</span>
-      <svg class="brand-line"><use href="#flourish"/></svg>
-      <span class="brand-bot">Rose</span>
+    <a class="logo" href="#top" aria-label="Verona Clothes home">
+      <span class="logo-main">V<i class="e"></i>RONA</span>
+      <span class="logo-sub">CLOTH<i class="e"></i>S</span>
     </a>
     <nav class="nav-links" aria-label="Main">
-      <a href="#collections">Collections</a>
-      <a href="#weddings">Weddings &amp; events</a>
-      <a href="#workshops">Workshops</a>
-      <a href="#visit">Visit</a>
+      <a href="#shop" data-t="navShop">Shop</a>
+      <a href="#look" data-t="navLook">The look</a>
+      <a href="#branches" data-t="navBranches">Branches</a>
+      <a href="#info" data-t="navInfo">Delivery</a>
     </nav>
-    <a class="btn btn-gold nav-cta" data-order="Hello Maison Rose! I'd like to order flowers." href="#" target="_blank" rel="noopener">Order</a>
+    <div class="nav-end">
+      <button class="lang" id="lang" type="button" aria-label="Switch language">عربي</button>
+      <a class="btn btn-ink nav-cta" data-order="general" href="#" target="_blank" rel="noopener" data-t="order">Order</a>
+    </div>
   </header>
 
   <main id="top">
-    <!-- HERO: the logo, set as luxury type on black -->
+
+    <!-- HERO -->
     <section class="hero">
-      <div class="hero-copy">
-        <p class="eyebrow">Flower boutique · Adma, Lebanon</p>
-        <h1 class="mark">
-          <span>Maison</span>
-          <svg class="mark-line" aria-hidden="true"><use href="#flourish"/></svg>
-          <span>Rose</span>
-        </h1>
-        <p class="lede">Weddings, events and daily flowers, arranged by hand and delivered to your door.</p>
-        <div class="hero-cta">
-          <a class="btn btn-gold" href="#collections">See the collections</a>
-          <a class="btn btn-ghost" data-order="Hello Maison Rose! I'd like to order a bouquet." href="#" target="_blank" rel="noopener">Order a bouquet</a>
+      <div class="hero-text">
+        <p class="eyebrow"><span data-t="heroEyebrow">Beirut · Hamra · Tarik Jdideh</span></p>
+        <h1><span data-t="heroTitle1">Dressed with grace,</span><em data-t="heroTitle2">priced with heart.</em></h1>
+        <p class="lead" data-t="heroLead">Modest, modern women's fashion — new pieces in store every week. Try them on in any of our three Beirut branches, or have them delivered anywhere in Lebanon.</p>
+        <div class="hero-ctas">
+          <a class="btn btn-ink" href="#shop" data-t="heroCta1">Shop new arrivals</a>
+          <a class="btn btn-line" href="#branches" data-t="heroCta2">Find a branch</a>
         </div>
+        <ul class="facts">
+          <li><b>3</b><span data-t="fact1">branches in Beirut</span></li>
+          <li><b>$4</b><span data-t="fact2">delivery to all Lebanon</span></li>
+          <li><b>60K+</b><span data-t="fact3">followers on Instagram</span></li>
+        </ul>
       </div>
       <div class="hero-art">
-        <figure class="arch"><img data-src="hero" alt="Box of soft pink roses"></figure>
-        <figure class="round"><img data-src="heroSmall" alt="Red roses close up"></figure>
+        <div class="glow" aria-hidden="true"></div>
+        <svg class="hero-fan" aria-hidden="true"><use href="#fan"/></svg>
+        <figure class="arch arch-lg"><img src="img/jacket-blush.jpg" alt="Model in a blush belted jacket and wide trousers at Verona"></figure>
+        <figure class="round"><img src="img/store-front.jpg" alt="Verona storefront in Beirut"></figure>
       </div>
     </section>
 
-    <ul class="pillars" aria-label="What we do">
-      <li>Weddings</li><li>Events</li><li>Daily flowers</li><li>Workshops</li><li>Delivery</li>
-    </ul>
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker-track" id="ticker"></div>
+    </div>
 
-    <!-- COLLECTIONS: mirrors the Instagram highlights -->
-    <section class="collections" id="collections">
-      <div class="section-head">
-        <p class="eyebrow">The collections</p>
-        <h2>Flowers for <i>every</i> occasion</h2>
-        <svg class="rule" aria-hidden="true"><use href="#flourish"/></svg>
+    <!-- SHOP -->
+    <section class="section" id="shop">
+      <div class="head">
+        <svg class="head-fan" aria-hidden="true"><use href="#fan"/></svg>
+        <p class="eyebrow" data-t="shopEyebrow">In store now</p>
+        <h2 data-t="shopTitle">New this season</h2>
+        <p class="sub" data-t="shopSub">Tap any piece to choose your size and order it on WhatsApp.</p>
       </div>
-      <div class="filters" role="tablist" aria-label="Filter">
-        <button class="chip is-on" data-filter="all" role="tab">All</button>
-        <button class="chip" data-filter="pink" role="tab">Pink</button>
-        <button class="chip" data-filter="red" role="tab">Red</button>
-        <button class="chip" data-filter="fresh" role="tab">Fresh</button>
-        <button class="chip" data-filter="boxes" role="tab">Boxes</button>
-      </div>
+      <div class="filters" id="filters" role="tablist"></div>
       <div class="grid" id="grid"></div>
     </section>
 
-    <!-- WEDDINGS & EVENTS -->
-    <section class="events" id="weddings">
-      <div class="events-copy">
-        <p class="eyebrow">Weddings &amp; events</p>
-        <h2>We set the scene<br><i>for forever</i></h2>
-        <p>Ceremony aisles, candlelit tables, communions, christenings and proms. Tell us the date and the feeling, and we design the flowers around it.</p>
-        <ul class="ticks">
-          <li>Venue styling and table centrepieces</li>
-          <li>Bridal bouquets and flower girls</li>
-          <li>Flower walls, arches and candle installations</li>
-        </ul>
-        <a class="btn btn-gold" data-order="Hello Maison Rose! I'm planning an event and would love a quote. Date: … Venue: … Guests: …" href="#" target="_blank" rel="noopener">Plan my event</a>
+    <!-- LOOK OF THE WEEK -->
+    <section class="section look" id="look">
+      <div class="look-art">
+        <figure class="arch"><img src="img/look-cream.jpg" alt="Cream embroidered knit vest over a white shirt with wide-leg jeans"></figure>
+        <figure class="arch arch-sm"><img src="img/look-grey.jpg" alt="The same vest in charcoal"></figure>
       </div>
-      <div class="events-mosaic">
-        <figure class="m1"><img data-src="table" alt="Long candlelit table dressed with flowers"></figure>
-        <figure class="m2"><img data-src="bride" alt="Bride holding a white bouquet"></figure>
-        <figure class="m3"><img data-src="arch" alt="Flower arch at an outdoor ceremony"></figure>
+      <div class="look-text">
+        <p class="eyebrow" data-t="lookEyebrow">Look of the week</p>
+        <h2 data-t="lookTitle">Full outfit, available at Verona</h2>
+        <p class="sub" data-t="lookSub">One vest, two moods. Pick cream or charcoal and we'll put the whole look together for you.</p>
+        <ol class="pieces" id="pieces"></ol>
+        <a class="btn btn-ink" data-order="look" href="#" target="_blank" rel="noopener" data-t="lookCta">Order the full look</a>
       </div>
     </section>
 
-    <!-- WORKSHOPS -->
-    <section class="workshop" id="workshops">
-      <figure class="ws-img"><img data-src="workshop" alt="Hands arranging a bouquet at a workshop"></figure>
-      <div class="ws-copy">
-        <p class="eyebrow">Workshops</p>
-        <h2>Bloom <i>together</i></h2>
-        <p>Spend an afternoon arranging with us, then take your bouquet home. Our last session, for Pink October, was held on 17 October 2026 with Latte Art.</p>
-        <p class="ws-next">Join the list to hear about the next date first.</p>
-        <a class="btn btn-ghost" data-order="Hello Maison Rose! Please add me to the list for your next flower workshop." href="#" target="_blank" rel="noopener">Join the next workshop</a>
+    <!-- BRANCHES -->
+    <section class="section branches" id="branches">
+      <div class="head">
+        <svg class="head-fan" aria-hidden="true"><use href="#fan"/></svg>
+        <p class="eyebrow" data-t="brEyebrow">Visit us</p>
+        <h2 data-t="brTitle">Three branches, one Verona</h2>
+        <p class="sub" data-t="brSub">The same collection in every store. Message ahead and we'll keep your size aside.</p>
+      </div>
+      <div class="branch-list" id="branchList"></div>
+    </section>
+
+    <!-- INFO -->
+    <section class="section info" id="info">
+      <div class="info-card">
+        <svg class="info-fan" aria-hidden="true"><use href="#fan"/></svg>
+        <h3 data-t="i1Title">Delivery $4</h3>
+        <p data-t="i1Text">To every area in Lebanon. Order on WhatsApp and pay on delivery.</p>
+      </div>
+      <div class="info-card">
+        <svg class="info-fan" aria-hidden="true"><use href="#fan"/></svg>
+        <h3 data-t="i2Title">Exchange in 3 days</h3>
+        <p data-t="i2Text">Not the right fit? Exchange it within 3 days at any branch. No refunds.</p>
+      </div>
+      <div class="info-card">
+        <svg class="info-fan" aria-hidden="true"><use href="#fan"/></svg>
+        <h3 data-t="i3Title">New every week</h3>
+        <p data-t="i3Text">Follow @veronaclothesshop to see the new pieces the day they arrive.</p>
       </div>
     </section>
 
-    <!-- VISIT -->
-    <section class="visit" id="visit">
-      <div class="section-head">
-        <p class="eyebrow">Visit or order</p>
-        <h2>From our boutique <i>to your door</i></h2>
-        <svg class="rule" aria-hidden="true"><use href="#flourish"/></svg>
-      </div>
-      <ol class="steps">
-        <li><span>I</span><h3>Choose</h3><p>Pick a piece from the collections, or describe what you have in mind.</p></li>
-        <li><span>II</span><h3>Message us</h3><p>Your request is written for you. Add the date and delivery address.</p></li>
-        <li><span>III</span><h3>Delivered</h3><p>Hand-delivered fresh, or collect it from our boutique in Adma.</p></li>
-      </ol>
-      <div class="visit-card">
-        <div>
-          <h3>Maison Rose</h3>
-          <p>Adma, Mont-Liban, Lebanon</p>
-        </div>
-        <a class="btn btn-ghost" href="https://www.google.com/maps/search/?api=1&amp;query=Maison+Rose+Adma+Lebanon" target="_blank" rel="noopener">Get directions</a>
+    <!-- INSTAGRAM -->
+    <section class="insta">
+      <div class="insta-strip" id="instaStrip"></div>
+      <div class="insta-text">
+        <p class="eyebrow" data-t="igEyebrow">4,486 posts · 60.2K followers</p>
+        <h2 data-t="igTitle">See it styled on Instagram</h2>
+        <a class="btn btn-gold" href="https://www.instagram.com/veronaclothesshop/" target="_blank" rel="noopener" data-t="igCta">Follow @veronaclothesshop</a>
       </div>
     </section>
   </main>
 
   <footer class="footer">
-    <div class="foot-mark"><span>Maison</span><svg class="mark-line" aria-hidden="true"><use href="#flourish"/></svg><span>Rose</span></div>
-    <p>Flower boutique · Weddings · Events · Daily flowers</p>
-    <p><a href="https://www.instagram.com/maisonrose.lb/" target="_blank" rel="noopener">Instagram @maisonrose.lb</a> · <a data-order="Hello Maison Rose!" href="#" target="_blank" rel="noopener">Message us</a></p>
-    <p class="fine">Demo website. Photos are placeholders from Unsplash until replaced with Maison Rose's own work.</p>
+    <a class="logo logo-light" href="#top" aria-label="Verona Clothes home">
+      <span class="logo-main">V<i class="e"></i>RONA</span>
+      <span class="logo-sub">CLOTH<i class="e"></i>S</span>
+    </a>
+    <p data-t="footer">Women's fashion · Beirut, Lebanon</p>
+    <p class="small"><a href="https://www.instagram.com/veronaclothesshop/" target="_blank" rel="noopener">Instagram</a> · <a data-order="general" href="#" target="_blank" rel="noopener">WhatsApp</a></p>
   </footer>
 
-  <!-- LIGHTBOX -->
-  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Arrangement" hidden>
-    <button class="x" id="closeBox" aria-label="Close">×</button>
-    <figure class="lb-img" id="lbImg"></figure>
-    <div class="lb-copy">
-      <p class="eyebrow" id="lbTag"></p>
-      <h3 id="lbName"></h3>
-      <p id="lbText"></p>
-      <a class="btn btn-gold" id="lbOrder" href="#" target="_blank" rel="noopener">Order this</a>
+  <!-- Product dialog -->
+  <dialog class="modal" id="modal">
+    <button class="modal-close" id="modalClose" type="button" aria-label="Close">×</button>
+    <div class="modal-body">
+      <figure class="arch"><img id="mImg" alt=""></figure>
+      <div class="modal-text">
+        <p class="eyebrow" id="mTag"></p>
+        <h3 id="mName"></h3>
+        <p id="mText"></p>
+        <p class="label" data-t="size">Size</p>
+        <div class="chips" id="mSizes"></div>
+        <p class="label" data-t="how">How would you like it?</p>
+        <div class="chips" id="mBranch"></div>
+        <a class="btn btn-ink btn-wide" id="mOrder" href="#" target="_blank" rel="noopener" data-t="orderWa">Order on WhatsApp</a>
+      </div>
     </div>
-  </div>
+  </dialog>
 
   <script src="app.js"></script>
 </body>
